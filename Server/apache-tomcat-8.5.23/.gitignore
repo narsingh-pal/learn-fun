@@ -1,0 +1,10 @@
+bin/
+lib/
+logs/
+temp/
+webapps/
+work/
+LICENSE
+NOTICE
+RELEASE-NOTES
+RUNNING.txt
