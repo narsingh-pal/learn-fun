@@ -1,0 +1,1 @@
+mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes  -DarchetypeArtifactId=pom-root  -DarchetypeVersion=RELEASE  -DinteractiveMode=false  -DgroupId=com.nsp.j2ee  -DartifactId=examples  -Dversion=1.0.0-SNAPSHOT  
