@@ -18,12 +18,12 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
 @Entity
-@Table(name = "stock_detail", catalog = "learnfun")
+@Table(name = "stock_detail", schema="public", catalog = "learnfun")
 public class StockDetail implements Serializable {
 
 	private static final long serialVersionUID = -7445899127788087309L;
 
-	private Integer stockId;
+	private Long  stockId;
 	private Stock stock;
 	private String compName;
 	private String compDesc;
@@ -45,11 +45,11 @@ public class StockDetail implements Serializable {
 	@Id
 	@GeneratedValue(generator = "generator")
 	@Column(name = "STOCK_ID", unique = true, nullable = false)
-	public Integer getStockId() {
+	public Long getStockId() {
 		return this.stockId;
 	}
 
-	public void setStockId(Integer stockId) {
+	public void setStockId(Long  stockId) {
 		this.stockId = stockId;
 	}
 	

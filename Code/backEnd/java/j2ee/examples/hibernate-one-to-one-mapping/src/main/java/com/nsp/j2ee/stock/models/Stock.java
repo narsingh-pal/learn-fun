@@ -14,12 +14,12 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "stock", catalog = "learnfun", uniqueConstraints = { @UniqueConstraint(columnNames = "STOCK_NAME"),
-		@UniqueConstraint(columnNames = "STOCK_CODE") })
+@Table(name = "stock", uniqueConstraints = { @UniqueConstraint(columnNames = "STOCK_NAME"),
+		@UniqueConstraint(columnNames = "STOCK_CODE") }, schema="public", catalog = "learnfun")
 public class Stock implements Serializable {
 
 	private static final long serialVersionUID = -7076028894386449331L;
-	private Integer stockId;
+	private Long stockId;
 	private String stockCode;
 	private String stockName;
 	private StockDetail stockDetail;
@@ -41,11 +41,11 @@ public class Stock implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "STOCK_ID", unique = true, nullable = false)
-	public Integer getStockId() {
+	public Long getStockId() {
 		return this.stockId;
 	}
 
-	public void setStockId(Integer stockId) {
+	public void setStockId(Long stockId) {
 		this.stockId = stockId;
 	}
 

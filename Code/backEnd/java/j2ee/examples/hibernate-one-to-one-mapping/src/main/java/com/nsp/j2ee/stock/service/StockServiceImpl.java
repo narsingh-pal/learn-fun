@@ -23,7 +23,7 @@ public class StockServiceImpl implements StockService {
 	public void addNewStock(Stock stock) {
 		List<Stock> stockList = stockDao.findAllByExample(stock);
 		if (stockList == null || stockList.isEmpty()) {
-			Long id = (Long) stockDao.save(stock);
+			 Long id = (Long) stockDao.save(stock);
 			logger.debug("Id of new Stock " + id);
 		} else {
 			logger.debug("Stock " + stock + " already exists");
