@@ -12,7 +12,6 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.nsp.j2ee.usermanagement.models.UserDetail;
 
 import java.lang.reflect.ParameterizedType;
 @SuppressWarnings("unchecked")
@@ -50,8 +49,8 @@ public abstract class AbstractHibernateDao<T extends Serializable> implements Ge
 		return getCurrentSession().createCriteria(this.entityClass).add(Restrictions.eq(fieldName, fieldValue)).list();
 	}
 	
-	public List<T> findAllByColumnName(String fieldName, UserDetail user) {
-		return getCurrentSession().createCriteria(this.entityClass).add(Restrictions.eq(fieldName, user)).list();
+	public List<T> findAllByColumnName(String fieldName, T entity) {
+		return getCurrentSession().createCriteria(this.entityClass).add(Restrictions.eq(fieldName, entity)).list();
 	}
 
 	public List<T> findAllUsingCriteria() {

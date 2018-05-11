@@ -1,4 +1,4 @@
-package com.nsp.j2ee.usermanagement.application.config;
+package com.nsp.j2ee.application.config;
 
 import java.util.Properties;
 import javax.sql.DataSource;

@@ -1,4 +1,4 @@
-package com.nsp.j2ee.usermanagement.application.config;
+package com.nsp.j2ee.application.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

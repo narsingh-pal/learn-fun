@@ -2,8 +2,8 @@ package com.nsp.j2ee.usermanagement.main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.nsp.j2ee.application.config.AppConfiguration;
 import com.nsp.j2ee.usermanagement.application.UserDetailApplication;
-import com.nsp.j2ee.usermanagement.application.config.AppConfiguration;
 
 
 
