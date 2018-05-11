@@ -9,5 +9,6 @@
   <modules>
   	<module>generic-dao</module>
     <module>user-detail-spring-hibernate</module>
+    <module>hibernate-one-to-one-mapping</module>
   </modules>
 </project>
