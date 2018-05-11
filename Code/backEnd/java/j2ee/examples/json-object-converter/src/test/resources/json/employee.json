@@ -1,0 +1,7 @@
+{
+  "name" : "Narsingh",
+  "age" : 31,
+  "position" : "Developer",
+  "salary" : 25000,
+  "skills" : [ "java", "python" ]
+}

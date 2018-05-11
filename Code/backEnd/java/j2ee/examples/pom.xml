@@ -10,5 +10,6 @@
   	<module>generic-dao</module>
     <module>user-detail-spring-hibernate</module>
     <module>hibernate-one-to-one-mapping</module>
+    <module>json-object-converter</module>
   </modules>
 </project>
