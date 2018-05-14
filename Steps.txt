@@ -1,1 +1,10 @@
 mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes  -DarchetypeArtifactId=pom-root  -DarchetypeVersion=RELEASE  -DinteractiveMode=false  -DgroupId=com.nsp.j2ee  -DartifactId=examples  -Dversion=1.0.0-SNAPSHOT  
+
+
+## Create a web application using maven
+mvn archetype:generate -DgroupId={project-packaging} 
+	-DartifactId={project-name} 
+	-DarchetypeArtifactId=maven-archetype-webapp 
+	-DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.nsp.j2ee -DartifactId=spring-mvc-hello-world -DarchetypeArtifactId=maven-archetype-webapp
