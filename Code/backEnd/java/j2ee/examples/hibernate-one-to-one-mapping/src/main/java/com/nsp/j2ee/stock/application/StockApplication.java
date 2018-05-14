@@ -37,7 +37,7 @@ public class StockApplication {
 		stockDetail.setListedDate(new Date());
 
 		stock.setStockDetail(stockDetail);
-		stockDetail.setStock(stock);
+		//stockDetail.setStock(stock);
 
 		
 		// Save new stock

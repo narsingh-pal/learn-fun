@@ -11,5 +11,6 @@ public interface StockService {
 	void addNewStock(Stock stock);
 	void removeStock(Stock stock);
 	List<Stock> getAllStocks() ;
-	
+	boolean isStockExist(Stock stock);
+	Stock findStock(long id);
 }

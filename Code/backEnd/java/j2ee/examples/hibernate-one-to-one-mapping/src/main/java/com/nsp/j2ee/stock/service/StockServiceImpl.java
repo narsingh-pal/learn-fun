@@ -37,4 +37,14 @@ public class StockServiceImpl implements StockService {
 	public List<Stock> getAllStocks() {
 		return stockDao.findAll();
 	}
+	
+	
+	public boolean isStockExist(Stock stock) {
+		List<Stock> stockList = stockDao.findAllByExample(stock);
+		return  (stockList == null || stockList.isEmpty()) ? false:true; 
+	}
+	
+	public Stock findStock(long id) {
+		return stockDao.findOne(id);
+	}
 }

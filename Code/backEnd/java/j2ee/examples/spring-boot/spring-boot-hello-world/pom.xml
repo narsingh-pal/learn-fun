@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nsp.j2ee</groupId>
+		<artifactId>spring-boot</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>spring-boot-hello-world</artifactId>
+	<name>spring-boot-hello</name>
+	<description>simple boot hello world application</description>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- Import dependency management from Spring Boot -->
+				<!-- Spring Boot provides a number of “Starters” that let you add jars 
+					to your classpath. Our sample application has already used spring-boot-starter-parent 
+					in the parent section of the POM. The spring-boot-starter-parent is a special 
+					starter that provides useful Maven defaults. It also provides a dependency-management 
+					section so that you can omit version tags for “blessed” dependencies. -->
+				<!-- spring-boot-starter-parent provides no dependencies by itself. To 
+					add the necessary dependencies, edit your pom.xml and add the spring-boot-starter-web 
+					dependency -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.0.2.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hamcrest</groupId>
+					<artifactId>hamcrest-core</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Logging -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- Other “Starters” provide dependencies that you are likely to need 
+			when developing a specific type of application. Since we are developing a 
+			web application, we add a spring-boot-starter-web dependency. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<!-- Executable jars and Java. Java does not provide a standard way to load 
+		nested jar files (jar files that are themselves contained within a jar). 
+		This can be problematic if you are looking to distribute a self-contained 
+		application. To solve this problem, many developers use “uber” jars. An uber 
+		jar packages all the classes from all the application’s dependencies into 
+		a single archive. The problem with this approach is that it becomes hard 
+		to see which libraries are in your application. It can also be problematic 
+		if the same filename is used (but with different content) in multiple jars. 
+		Spring Boot takes a different approach and lets you actually nest jars directly. -->
+
+	<!-- To create an executable jar, we need to add the spring-boot-maven-plugin 
+		to our pom.xml -->
+
+	<!-- To run that application, use the java -jar command, as follows: 
+	$ java -jar target/spring-boot-hello-world-0.0.1-SNAPSHOT.jar -->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

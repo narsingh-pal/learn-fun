@@ -45,7 +45,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
 		properties.put("hibernate.jdbc.batch_size", env.getRequiredProperty("hibernate.batch.size"));
 		// newly added for automatic creation of tables
-		properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
+		//properties.put("hibernate.hbm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
 		return properties;
 	}
 
