@@ -39,12 +39,12 @@ public class UserController {
 	// -------------------Retrieve All Users---------------------------------------------
 	 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public ResponseEntity<List<UserDetail>> listUsers() {
+    public ResponseEntity<?> listUsers() {
     	logger.info("Getting all user details");
         List<UserDetail> users = userDetailService.getAllUserDetails();
         
         if (users.isEmpty()) {
-            return new ResponseEntity(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
             // You many decide to return HttpStatus.NOT_FOUND
         }
         return new ResponseEntity<List<UserDetail>>(users, HttpStatus.OK);
@@ -58,7 +58,7 @@ public class UserController {
         UserDetail user = userDetailService.getUserDetailById(id);
         if (user == null) {
             logger.error("User with id {} not found." + id);
-            return new ResponseEntity(new CustomErrorType("User with id " + id 
+            return new ResponseEntity<>(new CustomErrorType("User with id " + id 
                     + " not found"), HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<UserDetail>(user, HttpStatus.OK);
@@ -67,7 +67,7 @@ public class UserController {
     // -------------------Create a User-------------------------------------------
     
     @RequestMapping(value = "/user/", method = RequestMethod.POST)
-    public ResponseEntity<?> createUser( UserDetail userDetail, UriComponentsBuilder ucBuilder) {
+    public ResponseEntity<?> createUser(@RequestBody UserDetail userDetail, UriComponentsBuilder ucBuilder) {
         logger.info("Creating User : " + userDetail);
  
         if (userDetailService.isUserDetailExist(userDetail)) {
@@ -75,7 +75,7 @@ public class UserController {
             return new ResponseEntity<>(new CustomErrorType("Unable to create. A User with name " + 
             		userDetail.getScreenName() + " already exist."),HttpStatus.CONFLICT);
         }
-        userDetailService.addNewUserDetail(userDetail);
+        userDetailService.updateUserDetail(userDetail);
  
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/api/user/{id}").buildAndExpand(userDetail.getUserId()).toUri());
@@ -86,13 +86,13 @@ public class UserController {
     
     @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
     public ResponseEntity<?> updateUser(@PathVariable("id") long id, @RequestBody UserDetail user) {
-        logger.info("Updating User with id {}" +  id);
+        logger.info("Updating User with id " +  id);
  
         UserDetail currentUser = userDetailService.getUserDetailById(id);
  
         if (currentUser == null) {
             logger.error("Unable to update. User with id "+id+" not found." );
-            return new ResponseEntity(new CustomErrorType("Unable to upate. User with id " + id + " not found."),
+            return new ResponseEntity<>(new CustomErrorType("Unable to upate. User with id " + id + " not found."),
                     HttpStatus.NOT_FOUND);
         }
         currentUser.setUserId(user.getUserId());
@@ -114,7 +114,7 @@ public class UserController {
         UserDetail user = userDetailService.getUserDetailById(id);
         if (user == null) {
             logger.error("Unable to delete. User with id "+id+" not found." );
-            return new ResponseEntity(new CustomErrorType("Unable to delete. User with id " + id + " not found."),
+            return new ResponseEntity<>(new CustomErrorType("Unable to delete. User with id " + id + " not found."),
                     HttpStatus.NOT_FOUND);
         }
         userDetailService.removeUserDetail(user);

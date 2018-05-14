@@ -58,7 +58,8 @@ public class UserDetailServiceImpl implements UserDetailService {
 		logger.debug("Getting MatchingUserDetail ...");
 		return userDetailDao.findAllByExample(u);
 	}
-
+	
+	@Transactional(readOnly = false)
 	public void removeUserDetail(UserDetail user) {
 		userDetailDao.delete(user);
 	}
@@ -74,13 +75,15 @@ public class UserDetailServiceImpl implements UserDetailService {
 		return (userDetailDao.findOne(user.getUserDetailId())==null) ? false : true;
 	}
 
+	// NOTE : Without this @Transactional annotation the update will not happen in the database
+	@Transactional(readOnly = false)
 	public UserDetail updateUserDetail(UserDetail user) {
-		UserDetail dbUser = userDetailDao.findOne(user.getUserDetailId());
+		/*UserDetail dbUser = userDetailDao.findOne(user.getUserDetailId());
 
 		if (dbUser == null)
-			return null;
+			return null;*/
 
-		userDetailDao.save(user);
+		userDetailDao.update(user);
 		return user;
 		
 	}
