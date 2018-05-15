@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nsp.j2ee</groupId>
+		<artifactId>examples</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>web</artifactId>
+	<name>web</name>
+	<packaging>pom</packaging>
+	<description>This module contains web applications which can be deployed on tomcat server</description>
+	<properties>
+		<tomcat.home>C:/learn-fun/Server/apache-tomcat-8.5.23</tomcat.home>
+		<where.to.copy.after.build>${tomcat.home}/webapps</where.to.copy.after.build>
+		<!-- <where.to.copy.after.build>${env.TOMCAT_DEPLOY}</where.to.copy.after.build> -->
+
+		<!-- you can also put these/below properties in the maven profile -->
+		<!-- <tomcat.deploy.hostname>a.b.com</tomcat.deploy.hostname> <tomcat.deploy.username>abc</tomcat.deploy.username> 
+			<tomcat.deploy.password>abc</tomcat.deploy.password> <tomcat.deploy.liferay.dir>/path/to/liferay-tomcat/deploy</tomcat.deploy.liferay.dir> 
+			<tomcat.deploy.liferay.ext.dir>/path/to/liferay-tomcat/tomcat/lib/ext</tomcat.deploy.liferay.ext.dir> -->
+
+	</properties>
+
+	<modules>
+		<module>spring-mvc</module>
+	</modules>
+
+	<!-- If you inspect the below snippet I have given ‘package‘ as the phase 
+		of execution. It simply says that “execute this ant target just after the 
+		package life cycle phase” of the maven build. With the execution of ‘package‘ 
+		, maven will the package the whole project into the local repository as a 
+		war file or ear file, for use as a dependency in other projects locally. 
+		Also this will create the same file in the target directory of your workspace 
+		as well. Our target is to copy that file from target director to server deployment 
+		folder with the build. The ${env.TOMCAT_DEPLOY} will refer to the our tomcat 
+		installation directory. Now build your project or project module. You can 
+		navigate to your project directory or project module directory where our 
+		modified pom.xml is. Run the following command. $mvn clean install -->
+
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<!-- <phase>install</phase> -->
+						<goals>
+							<goal>run</goal>
+						</goals>
+						
+						<!--
+						<configuration>
+							<target name="The name of the target"
+								if="The name of the property that must be set in order for this task"
+								unless="The name of the property that must NOT be set in order for this task"
+								description="A short description of this target's function">
+		
+								Place any Ant task here. You can add anything you can add between 
+									<target> and </target> in a build.xml.
+										</target>
+						<configuration> 
+						-->
+						
+						<configuration>
+							<target>
+								<!-- 
+								<exec dir="${project.basedir}" executable="${project.basedir}/src/main/sh/do-something.sh" failonerror="true">
+                  					<arg line="arg1 arg2 arg3 arg4" />
+                				</exec> 
+                				-->
+							
+							
+								<taskdef resource="net/sf/antcontrib/antcontrib.properties"
+									classpathref="maven.plugin.classpath" />
+								<if>
+									<equals arg1="${project.packaging}" arg2="jar" />
+									<then>
+										<copy file="target/${project.build.finalName}.${project.packaging}"
+											tofile="${where.to.copy.after.build}/${project.build.finalName}.${project.packaging}" />
+									</then>
+								</if>
+								<if>
+									<equals arg1="${project.packaging}" arg2="war" />
+									<then>
+										<copy file="target/${project.build.finalName}.${project.packaging}"
+											tofile="${where.to.copy.after.build}/${project.build.finalName}.${project.packaging}" />
+									</then>
+								</if>
+								<!-- If you want to deploy on remote server using scp protocol -->
+								<!-- 
+									<scp localFile="target/${project.build.finalName}.${project.packaging}" 
+									remoteToFile="${tomcat.deploy.username}@${tomcat.deploy.hostname}:${tomcat.deploy.liferay.dir}" 
+									verbose="true" password="${tomcat.deploy.password}" trust="true"> 
+									</scp> 
+									-->
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>ant-contrib</groupId>
+						<artifactId>ant-contrib</artifactId>
+						<version>1.0b3</version>
+						<exclusions>
+							<exclusion>
+								<groupId>ant</groupId>
+								<artifactId>ant</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.ant</groupId>
+						<artifactId>ant-nodeps</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

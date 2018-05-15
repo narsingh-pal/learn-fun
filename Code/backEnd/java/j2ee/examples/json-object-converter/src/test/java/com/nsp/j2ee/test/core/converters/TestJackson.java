@@ -36,9 +36,9 @@ public class TestJackson {
   
   @Test
   public void testJsonToJavaUsingJackson() throws SerializationException{
-	  ConverterService gsonConverter = new GsonConverterServiceImpl();
+	  ConverterService jacksonConverter = new JacksonConverterServiceImpl();
 	  Employee e = new Employee("Narsingh", 31, "Developer", 25000, "java,python".split(",") );
-	  String s = gsonConverter.serialize(e);
+	  String s = jacksonConverter.serialize(e);
 	  logger.info(s);
 	  
   }

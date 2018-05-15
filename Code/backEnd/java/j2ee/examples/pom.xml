@@ -20,6 +20,6 @@
     <module>json-object-converter</module>
     <module>spring-boot</module>
 	<module>BookStore</module>
-	<module>spring-mvc</module>
+	<module>web</module>
   </modules>
 </project>

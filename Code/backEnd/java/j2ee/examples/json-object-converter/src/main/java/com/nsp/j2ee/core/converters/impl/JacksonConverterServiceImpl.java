@@ -8,7 +8,9 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.nsp.j2ee.core.converters.api.ConverterService;
 import java.io.IOException;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JacksonConverterServiceImpl implements ConverterService {
 	private static ObjectMapper objectMapper;
 	final static Logger logger = Logger.getLogger(JacksonConverterServiceImpl.class);

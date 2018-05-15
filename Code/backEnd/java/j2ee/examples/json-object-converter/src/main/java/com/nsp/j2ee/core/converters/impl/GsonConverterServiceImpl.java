@@ -1,11 +1,13 @@
 package com.nsp.j2ee.core.converters.impl;
 
+import org.springframework.stereotype.Component;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.nsp.j2ee.core.converters.api.ConverterService;
 import com.nsp.j2ee.core.converters.api.DeserializationException;
 import com.nsp.j2ee.core.converters.api.SerializationException;
-
+@Component
 public class GsonConverterServiceImpl implements ConverterService {
 	private static Gson gson;
 	static {
