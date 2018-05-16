@@ -30,3 +30,6 @@ DOCKER
 9. apt-get update && apt-get install telnet
 
 10. docker-machine ls
+
+11. Docker Tomcat
+    docker run --name tomcat8 -it --rm -p 8888:8080 tomcat:8.0
