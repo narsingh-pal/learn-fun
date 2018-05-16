@@ -1,0 +1,9 @@
+Common applications of LDAP based directories
+
+  LDAP operations include entry creation, modification, deletion and search. 
+  As a general rule, LDAP directories are optimized for read and search operations, at the cost of write performance. 
+  Data, which will be modified often, therefore better suits in a relational database, which offers better support for transactions and referential integrity as well. Directories are rather used if comparatively stable data has to be provided centrally.
+  Common examples are network resources (printers, services) and user data (including credentials and rights for the resources). 
+  As a notable feature, many directory products offer replicas, which permit better access times and higher availability especially in geographically dispersed organizations. 
+  Not for nothing, the most common LDAP application is the enterprise phone book. 
+  That even Microsoft Outlook may be an LDAP client in this case - most average users probably don't know.
