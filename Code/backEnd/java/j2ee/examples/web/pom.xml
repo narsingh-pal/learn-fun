@@ -26,6 +26,7 @@
 	<modules>
 		<module>spring-mvc</module>
 		<module>webservices</module>
+		<module>authentication</module>
 	</modules>
 
 	<!-- If you inspect the below snippet I have given ‘package‘ as the phase 
