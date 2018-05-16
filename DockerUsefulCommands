@@ -1,0 +1,30 @@
+DOCKER
+
+1. list docker images
+    docker images
+
+2. run docker image
+    docker run imagename
+
+3. Remove docker image
+    docker rmi imageId
+
+4. docker-compose up
+
+5. Rebuild Docker
+    docker-compose build
+
+5. Clean docker
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
+    docker system prune -a
+6. list docker containers
+    docker ps
+
+7. Bash Shell Docker
+    docker exec -it <mycontainer> bash
+
+8. docker inspect <mycontainer>
+
+
+apt-get update && apt-get install telnet
