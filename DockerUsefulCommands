@@ -27,4 +27,6 @@ DOCKER
 8. docker inspect <mycontainer>
 
 
-apt-get update && apt-get install telnet
+9. apt-get update && apt-get install telnet
+
+10. docker-machine ls
