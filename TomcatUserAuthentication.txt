@@ -8,3 +8,9 @@ You need a
 	(1) username/password/role in tomcat-users.xml, 
 	(2) you need to specify the protected resources in web.xml and the roles that have access to those resources, and 
 	(3) you need to specify in web.xml that you'd like to use BASIC authentication. In addition, you have seen how Base64-encoding of usernames and passwords is really not very secure, so you have an understanding of why SSL is a VERY good idea when doing authentication.
+	
+	
+	
+----******Container based Security and Spring Security******----
+https://dzone.com/articles/container-based-security-and
+http://projects.spring.io/spring-security/
