@@ -9,6 +9,12 @@ mvn archetype:generate -DgroupId={project-packaging}
 
 mvn archetype:generate -DgroupId=com.nsp.j2ee -DartifactId=spring-mvc-hello-world -DarchetypeArtifactId=maven-archetype-webapp
 
+Developing simple Web services with Apache CXF and Maven
+	mvn archetype:generate -Dfilter=org.apache.cxf.archetype:cxf-jaxws-javafirst
+		org.apache.cxf.archetype:cxf-jaxws-wsdlfirst (Creates a contract (WSDL)-first CXF web service)
+		org.apache.cxf.archetype:cxf-jaxws-javafirst (Creates a project for developing a Web service starting from Java code)
+https://www.cse.unsw.edu.au/~cs9322/labs/lab01/index.html
+
 Create liferay plugins
 	1. Theme
 		mvn archetype:generate -Dfilter=liferay -DarchetypeRepository=https://repository.liferay.com/nexus/content/repositories/liferay-public-snapshots -DarchetypeGroupId=com.liferay.maven.archetypes -DarchetypeArtifactId=liferay-theme-archetype -DarchetypeVersion=6.1.2
