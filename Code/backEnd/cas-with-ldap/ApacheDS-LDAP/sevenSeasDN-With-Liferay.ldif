@@ -1,0 +1,1274 @@
+version: 1
+
+dn: cn=ThomasMastermanHardy,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: thomasmastermanhardy
+sn: Hardy
+description: Sir Thomas Masterman Hardy
+givenName: Thomas
+mail: thardy@royalnavy.mod.uk
+manager: cn=Horatio Nelson,ou=people,o=sevenSeas
+uid: thardy
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=HMS Lydia,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: HMS Lydia
+uniqueMember: cn=HoratioHornblower,ou=people,o=sevenSeas
+uniqueMember: cn=MoultrieCrystal,ou=people,o=sevenSeas
+uniqueMember: cn=ThomasQuist,ou=people,o=sevenSeas
+uniqueMember: cn=WilliamBush,ou=people,o=sevenSeas
+
+dn: ou=crews,ou=groups,o=sevenSeas
+objectClass: organizationalUnit
+objectClass: top
+ou: crews
+description: Contains entries which describe ship crews
+
+dn: cn=default.mad.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.9
+sn: MAD 9
+givenName: Test
+mail: default.mad.9@liferay.com
+
+dn: cn=default.sfo.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.2
+sn: SFO 2
+givenName: Test
+mail: default.sfo.2@liferay.com
+
+dn: cn=default.gru.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.5
+sn: GRU 5
+givenName: Test
+mail: default.gru.5@liferay.com
+
+dn: cn=default.hkg.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.8
+sn: HKG 8
+givenName: Test
+mail: default.hkg.8@liferay.com
+
+dn: cn=default.kul.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.1
+sn: KUL 1
+givenName: Test
+mail: default.kul.1@liferay.com
+
+dn: cn=default.mad.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.8
+sn: MAD 8
+givenName: Test
+mail: default.mad.8@liferay.com
+
+dn: cn=default.kul.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.7
+sn: KUL 7
+givenName: Test
+mail: default.kul.7@liferay.com
+
+dn: cn=default.sfo.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.9
+sn: SFO 9
+givenName: Test
+mail: default.sfo.9@liferay.com
+
+dn: cn=default.dlc.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.9
+sn: DLC 9
+givenName: Test
+mail: default.dlc.9@liferay.com
+
+dn: cn=default.kul.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.8
+sn: KUL 8
+givenName: Test
+mail: default.kul.8@liferay.com
+
+dn: cn=exporttoldap,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: exporttoldap
+sn: ldap
+givenName: export
+mail: exporttoldap@liferay.com
+userPassword:: e1NTSEF9Nk5OK3ViSkZZVXZYSTBJeVNrdDBVcUtpZ2dKdkdXMHZKK0FyeWc9P
+ Q==
+
+dn: cn=exporttest,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: exporttest
+uniqueMember: cn=exporttoldap,ou=people,o=sevenSeas
+description: group to test export to LDAP srever
+
+dn: cn=HoratioHornblower,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: horatiohornblower
+sn: Hornblower
+description: Capt. Horatio Hornblower, R.N
+givenName: Horatio
+mail: hhornblo@royalnavy.mod.uk
+uid: hhornblo
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.lax.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.9
+sn: LAX 9
+givenName: Test
+mail: default.lax.9@liferay.com
+
+dn: cn=default.nyc.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.5
+sn: NYC 5
+givenName: Test
+mail: default.nyc.5@liferay.com
+
+dn: cn=default.lax.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.8
+sn: LAX 8
+givenName: Test
+mail: default.lax.8@liferay.com
+
+dn: cn=default.kul.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.5
+sn: KUL 5
+givenName: Test
+mail: default.kul.5@liferay.com
+
+dn: cn=default.mad.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.10
+sn: MAD 10
+givenName: Test
+mail: default.mad.10@liferay.com
+
+dn: cn=default.lax.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.2
+sn: LAX 2
+givenName: Test
+mail: default.lax.2@liferay.com
+
+dn: cn=default.sfo.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.4
+sn: SFO 4
+givenName: Test
+mail: default.sfo.4@liferay.com
+
+dn: cn=default.hkg.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.9
+sn: HKG 9
+givenName: Test
+mail: default.hkg.9@liferay.com
+
+dn: cn=default.kul.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.3
+sn: KUL 3
+givenName: Test
+mail: default.kul.3@liferay.com
+
+dn: cn=FletcherChristian,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: fletcherchristian
+sn: Christian
+description: Lieutenant Fletcher Christian
+givenName: Fletcher
+mail: fchristi@royalnavy.mod.uk
+manager: cn=William Bligh,ou=people,o=sevenSeas
+uid: fchristi
+userPassword:: e1NTSEF9S3JOWnJUenVnWHpKRHV2ZEFYZktRYlNTTFhrUE1XRG5BQ0JXWVE9P
+ Q==
+
+dn: cn=default.dlc.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.5
+sn: DLC 5
+givenName: Test
+mail: default.dlc.5@liferay.com
+
+dn: cn=default.nyc.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.8
+sn: NYC 8
+givenName: Test
+mail: default.nyc.8@liferay.com
+
+dn: cn=test,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: test
+sn: Test
+givenName: Test
+mail: test@liferay.com
+userPassword:: e1NTSEF9WnkyZU9TYTBEUXk2R3NaeGE3SlZiSFk4SEhodmFMNjZzbTJCUXc9P
+ Q==
+
+dn: cn=default.gru.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.10
+sn: GRU 10
+givenName: Test
+mail: default.gru.10@liferay.com
+
+dn: cn=default.sfo.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.5
+sn: SFO 5
+givenName: Test
+mail: default.sfo.5@liferay.com
+
+dn: cn=default.ord.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.4
+sn: ORD 4
+givenName: Test
+mail: default.ord.4@liferay.com
+
+dn: cn=default.sfo.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.1
+sn: SFO 1
+givenName: Test
+mail: default.sfo.1@liferay.com
+
+dn: cn=default.kul.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.9
+sn: KUL 9
+givenName: Test
+mail: default.kul.9@liferay.com
+
+dn: cn=default.fra.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.10
+sn: FRA 10
+givenName: Test
+mail: default.fra.10@liferay.com
+
+dn: cn=default.nyc.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.7
+sn: NYC 7
+givenName: Test
+mail: default.nyc.7@liferay.com
+
+dn: cn=Cornelius Buckley,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Cornelius Buckley
+sn: Buckley
+description: LM Cornelius Buckley
+givenName: Cornelius
+mail: cbuckley@royalnavy.mod.uk
+manager: cn=Horatio Nelson,ou=people,o=sevenSeas
+uid: cbuckley
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.ord.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.8
+sn: ORD 8
+givenName: Test
+mail: default.ord.8@liferay.com
+
+dn: cn=default.gru.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.8
+sn: GRU 8
+givenName: Test
+mail: default.gru.8@liferay.com
+
+dn: ou=lrusers,ou=groups,o=sevenSeas
+objectClass: organizationalUnit
+objectClass: top
+ou: lrusers
+description: Contains users from liferay
+
+dn: cn=default.hkg.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.2
+sn: HKG 2
+givenName: Test
+mail: default.hkg.2@liferay.com
+
+dn: cn=default.nyc.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.1
+sn: NYC 1
+givenName: Test
+mail: default.nyc.1@liferay.com
+
+dn: cn=default.dlc.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.2
+sn: DLC 2
+givenName: Test
+mail: default.dlc.2@liferay.com
+
+dn: cn=default.nyc.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.3
+sn: NYC 3
+givenName: Test
+mail: default.nyc.3@liferay.com
+
+dn: cn=default.ord.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.2
+sn: ORD 2
+givenName: Test
+mail: default.ord.2@liferay.com
+
+dn: cn=default.sfo.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.8
+sn: SFO 8
+givenName: Test
+mail: default.sfo.8@liferay.com
+
+dn: cn=default.sfo.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.7
+sn: SFO 7
+givenName: Test
+mail: default.sfo.7@liferay.com
+
+dn: cn=default.fra.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.5
+sn: FRA 5
+givenName: Test
+mail: default.fra.5@liferay.com
+
+dn: cn=JohnHallett,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: johnhallett
+sn: Hallett
+description: Midshipman John Hallett
+givenName: John
+mail: jhallett@royalnavy.mod.uk
+manager: cn=William Bligh,ou=people,o=sevenSeas
+uid: jhallett
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=HMS Lydia,ou=crews,ou=groups,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: HMS Lydia
+uniqueMember: cn=Horatio Hornblower,ou=people,o=sevenSeas
+uniqueMember: cn=William Bush,ou=people,o=sevenSeas
+uniqueMember: cn=Thomas Quist,ou=people,o=sevenSeas
+uniqueMember: cn=Moultrie Crystal,ou=people,o=sevenSeas
+
+dn: cn=default.dlc.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.6
+sn: DLC 6
+givenName: Test
+mail: default.dlc.6@liferay.com
+
+dn: cn=default.mad.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.5
+sn: MAD 5
+givenName: Test
+mail: default.mad.5@liferay.com
+
+dn: cn=default.fra.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.7
+sn: FRA 7
+givenName: Test
+mail: default.fra.7@liferay.com
+
+dn: cn=default.lax.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.6
+sn: LAX 6
+givenName: Test
+mail: default.lax.6@liferay.com
+
+dn: ou=groups,o=sevenSeas
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+description: Contains entries which describe groups (crews, for instance)
+
+dn: cn=default.ord.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.6
+sn: ORD 6
+givenName: Test
+mail: default.ord.6@liferay.com
+
+dn: cn=default.hkg.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.4
+sn: HKG 4
+givenName: Test
+mail: default.hkg.4@liferay.com
+
+dn: cn=default.ord.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.9
+sn: ORD 9
+givenName: Test
+mail: default.ord.9@liferay.com
+
+dn: cn=default.dlc.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.8
+sn: DLC 8
+givenName: Test
+mail: default.dlc.8@liferay.com
+
+dn: cn=JohnFryer,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: johnfryer
+sn: Fryer
+description: Master John Fryer
+givenName: John
+mail: jfryer@royalnavy.mod.uk
+manager: cn=William Bligh,ou=people,o=sevenSeas
+uid: jfryer
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.hkg.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.7
+sn: HKG 7
+givenName: Test
+mail: default.hkg.7@liferay.com
+
+dn: cn=default.nyc.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.10
+sn: NYC 10
+givenName: Test
+mail: default.nyc.10@liferay.com
+
+dn: cn=default.fra.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.4
+sn: FRA 4
+givenName: Test
+mail: default.fra.4@liferay.com
+
+dn: cn=default.fra.8,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.8
+sn: FRA 8
+givenName: Test
+mail: default.fra.8@liferay.com
+
+dn: cn=default.gru.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.4
+sn: GRU 4
+givenName: Test
+mail: default.gru.4@liferay.com
+
+dn: cn=default.dlc.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.7
+sn: DLC 7
+givenName: Test
+mail: default.dlc.7@liferay.com
+
+dn: cn=default.sfo.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.10
+sn: SFO 10
+givenName: Test
+mail: default.sfo.10@liferay.com
+
+dn: cn=MoultrieCrystal,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: moultriecrystal
+sn: Crystal
+description: Lt. Crystal
+givenName: Moultrie
+mail: mchrysta@royalnavy.mod.uk
+manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
+uid: mchrysta
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.mad.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.1
+sn: MAD 1
+givenName: Test
+mail: default.mad.1@liferay.com
+
+dn: cn=WilliamBush,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: williambush
+sn: Bush
+description: Lt. William Bush
+givenName: William
+mail: wbush@royalnavy.mod.uk
+manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
+uid: wbush
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=HMS Victory,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: HMS Victory
+uniqueMember: cn=CorneliusBuckley,ou=people,o=sevenSeas
+uniqueMember: cn=HoratioNelson,ou=people,o=sevenSeas
+uniqueMember: cn=ThomasMastermanHardy,ou=people,o=sevenSeas
+
+dn: cn=default.lax.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.5
+sn: LAX 5
+givenName: Test
+mail: default.lax.5@liferay.com
+
+dn: cn=default.ord.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.10
+sn: ORD 10
+givenName: Test
+mail: default.ord.10@liferay.com
+
+dn: cn=HMS Victory,ou=crews,ou=groups,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: HMS Victory
+uniqueMember: cn=Horatio Nelson,ou=people,o=sevenSeas
+uniqueMember: cn=Thomas Masterman Hardy,ou=people,o=sevenSeas
+uniqueMember: cn=Cornelius Buckley,ou=people,o=sevenSeas
+
+dn: cn=default.mad.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.3
+sn: MAD 3
+givenName: Test
+mail: default.mad.3@liferay.com
+
+dn: cn=WilliamBligh,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: williambligh
+sn: Bligh
+description: Captain William Bligh
+givenName: William
+mail: wbligh@royalnavy.mod.uk
+uid: wbligh
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.nyc.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.4
+sn: NYC 4
+givenName: Test
+mail: default.nyc.4@liferay.com
+
+dn: cn=default.dlc.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.10
+sn: DLC 10
+givenName: Test
+mail: default.dlc.10@liferay.com
+
+dn: cn=default.lax.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.1
+sn: LAX 1
+givenName: Test
+mail: default.lax.1@liferay.com
+
+dn: cn=default.hkg.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.5
+sn: HKG 5
+givenName: Test
+mail: default.hkg.5@liferay.com
+
+dn: cn=default.gru.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.6
+sn: GRU 6
+givenName: Test
+mail: default.gru.6@liferay.com
+
+dn: cn=default.hkg.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.1
+sn: HKG 1
+givenName: Test
+mail: default.hkg.1@liferay.com
+
+dn: cn=default.nyc.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.9
+sn: NYC 9
+givenName: Test
+mail: default.nyc.9@liferay.com
+
+dn: cn=default.kul.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.2
+sn: KUL 2
+givenName: Test
+mail: default.kul.2@liferay.com
+
+dn: cn=default.mad.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.7
+sn: MAD 7
+givenName: Test
+mail: default.mad.7@liferay.com
+
+dn: cn=default.mad.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.4
+sn: MAD 4
+givenName: Test
+mail: default.mad.4@liferay.com
+
+dn: cn=default.nyc.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.2
+sn: NYC 2
+givenName: Test
+mail: default.nyc.2@liferay.com
+
+dn: cn=default.gru.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.1
+sn: GRU 1
+givenName: Test
+mail: default.gru.1@liferay.com
+
+dn: cn=default.hkg.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.3
+sn: HKG 3
+givenName: Test
+mail: default.hkg.3@liferay.com
+
+dn: cn=default.hkg.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.10
+sn: HKG 10
+givenName: Test
+mail: default.hkg.10@liferay.com
+
+dn: cn=default.gru.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.9
+sn: GRU 9
+givenName: Test
+mail: default.gru.9@liferay.com
+
+dn: cn=default.lax.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.10
+sn: LAX 10
+givenName: Test
+mail: default.lax.10@liferay.com
+
+dn: cn=HMS Bounty,ou=crews,ou=groups,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: HMS Bounty
+uniqueMember: cn=William Bligh,ou=people,o=sevenSeas
+uniqueMember: cn=Fletcher Christian,ou=people,o=sevenSeas
+uniqueMember: cn=John Fryer,ou=people,o=sevenSeas
+uniqueMember: cn=John Hallett,ou=people,o=sevenSeas
+
+dn: cn=default.dlc.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.3
+sn: DLC 3
+givenName: Test
+mail: default.dlc.3@liferay.com
+
+dn: cn=ThomasQuist,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: thomasquist
+sn: Quist
+description: Seaman Quist
+givenName: Thomas
+mail: tquist@royalnavy.mod.uk
+manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
+uid: tquist
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.mad.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.6
+sn: MAD 6
+givenName: Test
+mail: default.mad.6@liferay.com
+
+dn: cn=default.fra.9,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.9
+sn: FRA 9
+givenName: Test
+mail: default.fra.9@liferay.com
+
+dn: cn=default.sfo.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.6
+sn: SFO 6
+givenName: Test
+mail: default.sfo.6@liferay.com
+
+dn: cn=default.lax.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.7
+sn: LAX 7
+givenName: Test
+mail: default.lax.7@liferay.com
+
+dn: cn=default.nyc.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.nyc.6
+sn: NYC 6
+givenName: Test
+mail: default.nyc.6@liferay.com
+
+dn: cn=default.fra.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.2
+sn: FRA 2
+givenName: Test
+mail: default.fra.2@liferay.com
+
+dn: cn=default.dlc.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.1
+sn: DLC 1
+givenName: Test
+mail: default.dlc.1@liferay.com
+
+dn: cn=default.hkg.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.hkg.6
+sn: HKG 6
+givenName: Test
+mail: default.hkg.6@liferay.com
+
+dn: cn=default.fra.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.6
+sn: FRA 6
+givenName: Test
+mail: default.fra.6@liferay.com
+
+dn: cn=default.gru.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.2
+sn: GRU 2
+givenName: Test
+mail: default.gru.2@liferay.com
+
+dn: cn=HoratioNelson,ou=people,o=sevenSeas
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: horationelson
+sn: Nelson
+description: Lord Horatio Nelson
+givenName: Horatio
+mail: hnelson@royalnavy.mod.uk
+uid: hnelson
+userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+
+dn: cn=default.fra.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.3
+sn: FRA 3
+givenName: Test
+mail: default.fra.3@liferay.com
+
+dn: cn=default.sfo.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.sfo.3
+sn: SFO 3
+givenName: Test
+mail: default.sfo.3@liferay.com
+
+dn: cn=default.lax.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.3
+sn: LAX 3
+givenName: Test
+mail: default.lax.3@liferay.com
+
+dn: cn=default.ord.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.1
+sn: ORD 1
+givenName: Test
+mail: default.ord.1@liferay.com
+
+dn: cn=default.ord.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.7
+sn: ORD 7
+givenName: Test
+mail: default.ord.7@liferay.com
+
+dn: cn=default.dlc.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.dlc.4
+sn: DLC 4
+givenName: Test
+mail: default.dlc.4@liferay.com
+
+dn: cn=default.fra.1,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.fra.1
+sn: FRA 1
+givenName: Test
+mail: default.fra.1@liferay.com
+
+dn: o=sevenSeas
+objectclass: extensibleObject
+objectclass: top
+objectclass: domain
+dc: sevenSeas
+o: sevenSeas
+
+dn: cn=default.kul.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.4
+sn: KUL 4
+givenName: Test
+mail: default.kul.4@liferay.com
+
+dn: cn=default.gru.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.3
+sn: GRU 3
+givenName: Test
+mail: default.gru.3@liferay.com
+
+dn: cn=default.lax.4,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.lax.4
+sn: LAX 4
+givenName: Test
+mail: default.lax.4@liferay.com
+
+dn: cn=default.kul.6,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.6
+sn: KUL 6
+givenName: Test
+mail: default.kul.6@liferay.com
+
+dn: cn=default.gru.7,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.gru.7
+sn: GRU 7
+givenName: Test
+mail: default.gru.7@liferay.com
+
+dn: cn=default.mad.2,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.mad.2
+sn: MAD 2
+givenName: Test
+mail: default.mad.2@liferay.com
+
+dn: cn=default.ord.3,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.3
+sn: ORD 3
+givenName: Test
+mail: default.ord.3@liferay.com
+
+dn: cn=default.ord.5,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.ord.5
+sn: ORD 5
+givenName: Test
+mail: default.ord.5@liferay.com
+
+dn: ou=people,o=sevenSeas
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+description: Contains entries which describe persons (seamen)
+
+dn: cn=default.kul.10,ou=people,o=sevenSeas
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: default.kul.10
+sn: KUL 10
+givenName: Test
+mail: default.kul.10@liferay.com
+
+dn: cn=HMS Bounty,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: HMS Bounty
+uniqueMember: cn=FletcherChristian,ou=people,o=sevenSeas
+uniqueMember: cn=JohnFryer,ou=people,o=sevenSeas
+uniqueMember: cn=JohnHallett,ou=people,o=sevenSeas
+uniqueMember: cn=WilliamBligh,ou=people,o=sevenSeas
+
+dn: ou=ranks,ou=groups,o=sevenSeas
+objectClass: organizationalUnit
+objectClass: top
+ou: ranks
+description: Contains entries which describe naval ranks (e.g. captain)
+

@@ -1,16 +1,2 @@
-Setting up your web application to do Basic authentication with TomcatSW is quite easy. However, if you use plain HTTP, your name and password can be intercepted by monitoring network communication, so I recommend using HTTP with SSL (HTTPS) if you do any kind of authentication with your web application so that your name and password are encrypted. With Basic authentication (with and without SSL), your name and password do get automatically Base64- encoded , which is better than having the name and password cross the network in plaintext, but Base64 is 'encoding', not 'encryption', and it can be easily decoded, as we will show in this tutorial.
+http://www.avajava.com/tutorials/lessons/how-do-i-use-basic-authentication-with-tomcat.html
 
-In Basic authentication, if you try to hit a web application url that is protected and you are currently unauthenticated, a popup window appears and you enter a particular username/password, which gets sent to Tomcat. Tomcat checks to see that the sent username and password match a user entry in tomcat-users.xml, and it makes sure that the user's tomcat-users.xml role (or roles) match the role (or roles) that have access to your web application resource, which is specified in your web.xmlW file. If we have a match (username/password/role), the user gains access to the application resource.
-
-
-Basic authentication is really easy to set up. 
-You need a 
-	(1) username/password/role in tomcat-users.xml, 
-	(2) you need to specify the protected resources in web.xml and the roles that have access to those resources, and 
-	(3) you need to specify in web.xml that you'd like to use BASIC authentication. In addition, you have seen how Base64-encoding of usernames and passwords is really not very secure, so you have an understanding of why SSL is a VERY good idea when doing authentication.
-	
-	
-	
-----******Container based Security and Spring Security******----
-https://dzone.com/articles/container-based-security-and
-http://projects.spring.io/spring-security/

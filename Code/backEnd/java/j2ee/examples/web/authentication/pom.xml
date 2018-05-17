@@ -14,5 +14,6 @@
   
   <modules>
     <module>secure-web-application</module>
+    <module>secure-web-application-with-login-form</module>
   </modules>
 </project>

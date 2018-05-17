@@ -30,3 +30,9 @@ Create liferay plugins
 	
 	5. Portlet (Spring MVC)
 		mvn archetype:generate -Dfilter=liferay -DarchetypeRepository=https://repository.liferay.com/nexus/content/repositories/liferay-public-snapshots -DarchetypeGroupId=com.liferay.maven.archetypes -DarchetypeArtifactId=liferay-portlet-spring-mvc-archetype -DarchetypeVersion=6.2.4
+		
+
+##
+# CAS Authentication Credentials
+#
+cas.authn.accept.users=casuser::Mellon

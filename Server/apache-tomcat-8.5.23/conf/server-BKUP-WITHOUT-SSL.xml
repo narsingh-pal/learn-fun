@@ -85,12 +85,6 @@
         </SSLHostConfig>
     </Connector>
     -->
-	<Connector port="7443" protocol="org.apache.coyote.http11.Http11Protocol" connectionTimeout="20000" URIEncoding="UTF-8"
-               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
-               clientAuth="false" sslProtocol="TLS" keyAlias="learnfun" keystoreFile="C:\learn-fun.jks" keystorePass="learnfun" />	
-	
-	
-	
     <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
          This connector uses the APR/native implementation which always uses
          OpenSSL for TLS.
