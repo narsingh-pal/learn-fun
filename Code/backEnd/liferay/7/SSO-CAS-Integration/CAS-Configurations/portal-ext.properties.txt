@@ -1,0 +1,1 @@
+company.security.auth.type=screenName

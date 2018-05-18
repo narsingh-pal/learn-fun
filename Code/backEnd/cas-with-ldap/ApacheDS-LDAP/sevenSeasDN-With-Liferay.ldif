@@ -12,7 +12,8 @@ givenName: Thomas
 mail: thardy@royalnavy.mod.uk
 manager: cn=Horatio Nelson,ou=people,o=sevenSeas
 uid: thardy
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9YmF3aUpGVy84VU1pMzVHVS9OTjQrZGxXa2RNaFVCbzBacWJtemc9P
+ Q==
 
 dn: cn=HMS Lydia,ou=lrusers,ou=groups,o=sevenSeas
 objectclass: groupOfUniqueNames
@@ -148,6 +149,20 @@ cn: exporttest
 uniqueMember: cn=exporttoldap,ou=people,o=sevenSeas
 description: group to test export to LDAP srever
 
+dn: cn=casuser,ou=people,o=sevenSeas
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: casuser
+sn: casuser
+description: cas user password is Mellon
+givenName: casuser
+mail: casuser@liferay.com
+uid: casuser
+userPassword:: e1NTSEF9UU9ML2JpaVU5V0VBUjhwcjlENXBkVzVvUWNqZ0t6ZkZmR2ZHUWc9P
+ Q==
+
 dn: cn=HoratioHornblower,ou=people,o=sevenSeas
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
@@ -159,7 +174,8 @@ description: Capt. Horatio Hornblower, R.N
 givenName: Horatio
 mail: hhornblo@royalnavy.mod.uk
 uid: hhornblo
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9MjZRLzE1TDYycWtzbElta0lXNEhES0YzM1JwSm1XaFo0TldJdUE9P
+ Q==
 
 dn: cn=default.lax.9,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -368,19 +384,20 @@ sn: NYC 7
 givenName: Test
 mail: default.nyc.7@liferay.com
 
-dn: cn=Cornelius Buckley,ou=people,o=sevenSeas
+dn: cn=CorneliusBuckley,ou=people,o=sevenSeas
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: person
 objectClass: top
-cn: Cornelius Buckley
+cn: corneliusbuckley
 sn: Buckley
 description: LM Cornelius Buckley
 givenName: Cornelius
 mail: cbuckley@royalnavy.mod.uk
 manager: cn=Horatio Nelson,ou=people,o=sevenSeas
 uid: cbuckley
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9TGVKS3JTYmVmM1NMOHZxOXFDN1h0NHBGS0x2dnlxbjdZVHR6Ymc9P
+ Q==
 
 dn: cn=default.ord.8,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -500,7 +517,8 @@ givenName: John
 mail: jhallett@royalnavy.mod.uk
 manager: cn=William Bligh,ou=people,o=sevenSeas
 uid: jhallett
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9c3pBM1g3ZmRiSUhPMExOUXlFekppSkx1ZTkyQzlaN0dLeXpCRmc9P
+ Q==
 
 dn: cn=HMS Lydia,ou=crews,ou=groups,o=sevenSeas
 objectClass: groupOfUniqueNames
@@ -609,7 +627,8 @@ givenName: John
 mail: jfryer@royalnavy.mod.uk
 manager: cn=William Bligh,ou=people,o=sevenSeas
 uid: jfryer
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9dktOOUlBVjJKci9nemZ4cWx5TldLL3RkTUlCVUVBbW9kU2tqRGc9P
+ Q==
 
 dn: cn=default.hkg.7,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -650,6 +669,12 @@ cn: default.fra.8
 sn: FRA 8
 givenName: Test
 mail: default.fra.8@liferay.com
+
+dn: cn=manager-gui,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: manager-gui
+uniqueMember: cn=tomcat,ou=people,o=sevenSeas
 
 dn: cn=default.gru.4,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -693,7 +718,8 @@ givenName: Moultrie
 mail: mchrysta@royalnavy.mod.uk
 manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
 uid: mchrysta
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9RlNMcWRCbUFwbzZUR3RoWnZBNUxVV3BKWEN3MndXTGFlemt2NWc9P
+ Q==
 
 dn: cn=default.mad.1,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -717,7 +743,22 @@ givenName: William
 mail: wbush@royalnavy.mod.uk
 manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
 uid: wbush
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9RTBIR3NRVGYydno0NlJvQ1hZRUltZkhiL0JiWWUrU0FGT1ZMc3c9P
+ Q==
+
+dn: cn=tomcat,ou=people,o=sevenSeas
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: tomcat
+sn: tomcat
+description: tomcat admin password is adm3n
+givenName: tomcat
+mail: tomcat@liferay.com
+uid: tomcat
+userPassword:: e1NTSEF9Um9HWHBqL0wxOS9BbWllVU5zcWcyN0JlU3llcWZ3dFFaY3czMkE9P
+ Q==
 
 dn: cn=HMS Victory,ou=lrusers,ou=groups,o=sevenSeas
 objectclass: groupOfUniqueNames
@@ -776,7 +817,8 @@ description: Captain William Bligh
 givenName: William
 mail: wbligh@royalnavy.mod.uk
 uid: wbligh
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9aVZtbnQ4RVh0QkJBSTdEWWZ1R1l6VkdFNEUrTHlFS2kzNWxyS3c9P
+ Q==
 
 dn: cn=default.nyc.4,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -928,6 +970,12 @@ sn: GRU 9
 givenName: Test
 mail: default.gru.9@liferay.com
 
+dn: cn=ROLE_ADMIN,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: ROLE_ADMIN
+uniqueMember: cn=casuser,ou=people,o=sevenSeas
+
 dn: cn=default.lax.10,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
 objectclass: organizationalPerson
@@ -946,6 +994,12 @@ uniqueMember: cn=William Bligh,ou=people,o=sevenSeas
 uniqueMember: cn=Fletcher Christian,ou=people,o=sevenSeas
 uniqueMember: cn=John Fryer,ou=people,o=sevenSeas
 uniqueMember: cn=John Hallett,ou=people,o=sevenSeas
+
+dn: cn=manager-gui,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: manager-gui
+uniqueMember: cn=casuser,ou=people,o=sevenSeas
 
 dn: cn=default.dlc.3,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -969,7 +1023,8 @@ givenName: Thomas
 mail: tquist@royalnavy.mod.uk
 manager: cn=Horatio Hornblower,ou=people,o=sevenSeas
 uid: tquist
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9Ymt2VTh5VFI0UGVod3NvQld5ZHMvY0pydEM3T29abG4rQXdSVXc9P
+ Q==
 
 dn: cn=default.mad.6,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -1082,7 +1137,8 @@ description: Lord Horatio Nelson
 givenName: Horatio
 mail: hnelson@royalnavy.mod.uk
 uid: hnelson
-userPassword:: e1NIQX1uVTRlSTcxYmNuQkdxZU8wdDl0WHZZMXU1b1E9
+userPassword:: e1NTSEF9NEpIZnZubTQ1MEU4L1ZUQVlYNjhrK3BsQ2ZnUEZCT3ZZZzVnMXc9P
+ Q==
 
 dn: cn=default.fra.3,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
@@ -1103,6 +1159,12 @@ cn: default.sfo.3
 sn: SFO 3
 givenName: Test
 mail: default.sfo.3@liferay.com
+
+dn: cn=ROLE_ADMIN,ou=lrusers,ou=groups,o=sevenSeas
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: ROLE_ADMIN
+uniqueMember: cn=casuser,ou=people,o=sevenSeas
 
 dn: cn=default.lax.3,ou=people,o=sevenSeas
 objectclass: inetOrgPerson

@@ -1,0 +1,9 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^https?://localhost:5443.*",
+  "name" : "learnfun",
+  "theme" : "learnfun",
+  "id" : 10000033,
+  "description" : "learnfun sample service",
+  "evaluationOrder" : 1000000
+}

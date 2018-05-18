@@ -1,0 +1,56 @@
+0	If liferay Tells CAS URLs are unreachable
+		https://web.liferay.com/community/forums/-/message_boards/message/25922860
+		Re-generate the certificate. Input hostname when the keytool ask the name field, It should be the hostname of the CAS server (IP will not work too)
+
+0	If you get ssl error on test connection
+		https://web.liferay.com/community/forums/-/message_boards/message/87828022
+	This error occur due to import certificates issue.
+	To solve this please follow the steps.	
+	
+0	Steps to Create self signed certificate:
+	Commands to generate, export,and add the certificate to CACERT
+		1.Command to generate the key:
+		keytool -genkey -alias mycas -keypass changeit -keyalg RSA
+
+		2.Command to export the generated key to a certificate
+		keytool -export -alias mycas -keypass changeit -file %FILE_NAME%
+		Here file name is to be replaced by your custom certificate name eg: "mycas.cert"
+
+		3.Command to import the certificate to a trusted store (cacerts in this case)
+		keytool -import -alias mycas -file mycas.cert -keypass changeit -keystore "C:/Program Files/Java/jdk1.8.0_121/jre/lib/security/cacerts"
+
+		4.Command to verify if the certificate was successfully added to the trusted store
+		Keytool -list -alias tomcat -keystore cacerts
+		(Present working directory :%JAVA_HOME%/jre/lib/security)
+
+		NOTE: The server certificate must contain the name of the server in which CAS server exists for e.g. your alias must equal to your domain name you have entered while creating certificate.
+		Use first and second command on server in order to generate certificate on server.
+		Use third and fourth command on client side in order to import certificate and check if it is imported successfully.
+		
+		5. In all of the above commands replace mycas with the name of the host machine e.g. "host-machine-name" on which tomcat will run
+
+		
+Example
+		1.Command to generate the key:
+			keytool -genkey -alias host-machine-name -keypass changeit -keyalg RSA
+			keytool -genkey -alias host-machine-name -keypass changeit -keyalg RSA -keystore "c:\.keystore"
+
+		2.Command to export the generated key to a certificate
+			keytool -export -alias host-machine-name -keypass changeit -file "c:\host-machine-name.cert" -keystore "c:\.keystore"
+
+		3.Command to import the certificate to a trusted store (cacerts in this case)
+			keytool -import -alias host-machine-name -file "c:\host-machine-name.cert" -keypass changeit -keystore "C:/Program Files/Java/jdk1.8.0_131/jre/lib/security/cacerts"
+
+		4.Command to verify if the certificate was successfully added to the trusted store
+			Keytool -list -alias host-machine-name -keystore "C:/Program Files/Java/jdk1.8.0_131/jre/lib/security/cacerts"
+		(Present working directory :%JAVA_HOME%/jre/lib/security)
+
+		5. In all of the above commands replace mycas with the name of the host machine e.g. "host-machine-name" on which tomcat will run		
+		
+		6. Enter this code in server.xml file to enable ssl connection for CAS.
+			<Connector port="6443" protocol="HTTP/1.1" SSLEnabled="true"
+              maxThreads="150" scheme="https" secure="true"
+              clientAuth="false" sslProtocol="TLS" keyAlias="host-machine-name"  
+              keystoreFile="c:\.keystore"
+              keystorePass="changeit" 
+              truststoreFile="C:/Program Files/Java/jdk1.8.0_131/jre/lib/security/cacerts"/>

@@ -1,0 +1,9 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^https://localhost:6443.*",
+  "name" : "learnfunliferay",
+  "theme" : "learnfunliferay",
+  "id" : 10000044,
+  "description" : "learnfun Liferay sample service",
+  "evaluationOrder" : 1000001
+}

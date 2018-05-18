@@ -1,0 +1,9 @@
+http://www.baeldung.com/spring-security-cas-sso
+
+https://github.com/apereo/cas-gradle-overlay-template
+https://apereo.github.io/cas/5.2.x/installation/LDAP-Authentication.html
+https://apereo.github.io/cas/5.2.x/index.html
+https://wiki.jasig.org/plugins/servlet/mobile?contentId=13571304#content/view/13571304
+https://apereo.github.io/cas/5.2.x/installation/Configuration-Properties.html#ldap-authentication-1
+https://github.com/casinthecloud/cas-overlay-demo
+https://github.com/casinthecloud/cas-overlay-demo/tree/master/cas-overlay-server-demo

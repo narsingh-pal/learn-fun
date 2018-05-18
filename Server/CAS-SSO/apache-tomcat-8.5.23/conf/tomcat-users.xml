@@ -41,4 +41,17 @@
   <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
   <user username="role1" password="<must-be-changed>" roles="role1"/>
 -->
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="secure-app"/>
+  <role rolename="ROLE_ADMIN"/>
+  <role rolename="role1"/>
+  <role rolename="role2"/>
+  <user password="s3cret" roles="role2,role1" username="both"/>
+  <user password="s3cret" roles="role1" username="role1"/>
+  <user password="s3cret" roles="manager-gui,manager-script,manager-jmx,manager-status,secure-app,ROLE_ADMIN" username="tomcat"/>
+  <user username="narsingh" password="narsingh" roles="secure-app,ROLE_ADMIN"/>
+  <user username="admin" password="nimda" roles="secure-app,ROLE_ADMIN"/>
 </tomcat-users>
