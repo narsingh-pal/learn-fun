@@ -54,3 +54,12 @@ Example
               keystoreFile="c:\.keystore"
               keystorePass="changeit" 
               truststoreFile="C:/Program Files/Java/jdk1.8.0_131/jre/lib/security/cacerts"/>
+			  
+=========================================================================================================
+Another way to generate SSL certificates
+keytool -genkey -keyalg RSA -alias localhost -keystore c:\localhost.jks -storepass localhost -validity 360 -keysize 2048
+
+
+		<Connector port="7443" protocol="org.apache.coyote.http11.Http11Protocol" connectionTimeout="20000" URIEncoding="UTF-8"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS" keyAlias="localhost" keystoreFile="c:localhost.jks" keystorePass="localhost" />			  
