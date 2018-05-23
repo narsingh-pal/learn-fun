@@ -1,0 +1,42 @@
+CAS VS OpenId-OAuth
+
+https://stackoverflow.com/questions/2033026/sso-with-cas-or-oauth/3181557#3181557
+
+OpenID is not a 'successor' or 'substitute' for CAS, they're different, in intent and in implementation.
+
+
+CAS centralizes authentication. 
+Use it if you want all your (probably internal) applications to ask users to login to a single server 
+(all applications are configured to point to a single CAS server).
+
+OpenID decentralizes authentication. 
+Use it if you want your application to accept users login to whatever authentication service they want 
+(the user provides the OpenID server address - in fact, the 'username' is the server's URL).
+
+None of the above handle authorization (without extensions and/or customization).
+
+OAuth handles authorization, 
+but it is not a substitute for the traditional 'USER_ROLES table' (user access). 
+It handles authorization for third-parties.
+
+For example, you want your application to integrate with Twitter: 
+a user could allow it to tweet automatically when they update their data or post new content. 
+You want to access some third-party service or resource on behalf of a user, without getting his password 
+(which is obviously unsecure for the user). The application asks Twitter for access, the user authorizes it (through Twitter), 
+and then the app may have access.
+
+So, OAuth is not about Single Sign-On (nor a substitute for the CAS protocol). 
+It is not about you controlling what the user can access. 
+It is about letting the user to control how their resources may be accessed by third-parties. 
+Two very different use-cases.
+
+To the context you described, CAS is probably the right choice.
+
+[updated]
+That said, you can implement SSO with OAuth, 
+if you consider the identity of the user as a secured resource. 
+This is what 'Sign up with GitHub' and the likes do, basically. 
+Probably not the original intent of the protocol, but it can be done. 
+If you control the OAuth server, and restrict the apps to only authenticate with it, that's SSO.
+
+No standard way to force logout, though (CAS has this feature).
