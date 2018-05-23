@@ -7,11 +7,11 @@ along with a logout link.  --%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring Security LDAP authentication Demo </title>
+<title>Spring Security CAS SSO Demo </title>
 </head>
 <body>
 	<div align="center">
-		<h1>Spring Security LDAP authentication Demo </h1>
+		<h1>Spring Security CAS SSO Demo </h1>
 		<a href="${pageContext.request.contextPath}/admin">Go to Administrator Page</a>
 	</div>
 </body>

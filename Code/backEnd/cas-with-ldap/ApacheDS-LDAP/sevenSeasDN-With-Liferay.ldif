@@ -70,6 +70,12 @@ sn: HKG 8
 givenName: Test
 mail: default.hkg.8@liferay.com
 
+dn: cn=ROLE_ADMIN,o=sevenSeas
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: ROLE_ADMIN
+uniqueMember: cn=casuser,ou=people,o=sevenSeas
+
 dn: cn=default.kul.1,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
 objectclass: organizationalPerson
@@ -160,7 +166,7 @@ description: cas user password is Mellon
 givenName: casuser
 mail: casuser@liferay.com
 uid: casuser
-userPassword:: e1NTSEF9UU9ML2JpaVU5V0VBUjhwcjlENXBkVzVvUWNqZ0t6ZkZmR2ZHUWc9P
+userPassword:: e1NTSEF9R1R5akwrT0JObG45SGZ2NDY2U2NXQWtWTFZQNVpxYlYxWlRxamc9P
  Q==
 
 dn: cn=HoratioHornblower,ou=people,o=sevenSeas
@@ -311,7 +317,8 @@ cn: test
 sn: Test
 givenName: Test
 mail: test@liferay.com
-userPassword:: e1NTSEF9WnkyZU9TYTBEUXk2R3NaeGE3SlZiSFk4SEhodmFMNjZzbTJCUXc9P
+uid: test
+userPassword:: e1NTSEF9dlVQTi9udmJOWlMrWWdmRWZNZ2tJQWxpeGxpREx3VURGelpKTHc9P
  Q==
 
 dn: cn=default.gru.10,ou=people,o=sevenSeas
@@ -970,12 +977,6 @@ sn: GRU 9
 givenName: Test
 mail: default.gru.9@liferay.com
 
-dn: cn=ROLE_ADMIN,o=sevenSeas
-objectClass: groupOfUniqueNames
-objectClass: top
-cn: ROLE_ADMIN
-uniqueMember: cn=casuser,ou=people,o=sevenSeas
-
 dn: cn=default.lax.10,ou=people,o=sevenSeas
 objectclass: inetOrgPerson
 objectclass: organizationalPerson
@@ -1000,6 +1001,7 @@ objectclass: groupOfUniqueNames
 objectclass: top
 cn: manager-gui
 uniqueMember: cn=casuser,ou=people,o=sevenSeas
+uniqueMember: cn=tomcat,ou=people,o=sevenSeas
 
 dn: cn=default.dlc.3,ou=people,o=sevenSeas
 objectclass: inetOrgPerson

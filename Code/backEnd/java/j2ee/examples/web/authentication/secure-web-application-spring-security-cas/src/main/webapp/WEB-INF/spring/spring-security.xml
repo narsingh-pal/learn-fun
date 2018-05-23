@@ -1,0 +1,69 @@
+<beans:beans xmlns:security="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+ 
+  	<security:ldap-server url="ldap://localhost:10389/o=sevenSeas" id="learnFunLdap"/>
+	<security:ldap-user-service id="userService" server-ref="learnFunLdap" user-search-base="ou=people"
+			user-search-filter="(uid={0})"  group-search-base="ou=groups"
+			group-search-filter="uniqueMember={0}" role-prefix="ROLE_" />
+			
+	<beans:bean id="serviceProperties" class="org.springframework.security.cas.ServiceProperties">
+		<beans:property name="service" value="https://localhost:7443/secure-web-application-spring-security-cas/login/cas" />
+		<beans:property name="sendRenew" value="false" />
+		
+	</beans:bean>
+
+	<security:http entry-point-ref="casAuthenticationEntryPoint" auto-config="true">
+		<!-- <security:intercept-url pattern="/secure/**" access="ROLE_USER" /> -->
+		<!-- <security:intercept-url pattern="/**" access="isAuthenticated()" /> -->
+		<security:intercept-url pattern="/admin" access="isAuthenticated()" />
+		<!-- <security:intercept-url pattern="/login/**" access="isAuthenticated()" /> -->
+		<security:custom-filter position="CAS_FILTER" ref="casAuthenticationFilter" />
+		<security:csrf disabled="true" />
+		<security:form-login />
+		<!-- <security:logout /> -->
+		<!-- <security:remember-me key="_my_remember_me_key" token-validity-seconds="864000" data-source-ref="dataSource" user-service-ref="userService" /> -->
+	</security:http>
+
+	<beans:bean id="casAuthenticationEntryPoint" class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
+		<beans:property name="loginUrl" value="https://localhost:5443/cas/login" />
+		<beans:property name="serviceProperties" ref="serviceProperties" />
+	</beans:bean>
+
+
+	<beans:bean id="casAuthenticationFilter" class="org.springframework.security.cas.web.CasAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+		<beans:property name="authenticationFailureHandler">
+			<beans:bean class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+				<beans:property name="defaultFailureUrl" value="/casfailed.jsp" />
+			</beans:bean>
+		</beans:property>
+		<beans:property name="filterProcessesUrl" value="/login/cas" />
+		<beans:property name="authenticationSuccessHandler">
+	       <beans:bean class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+	       	<beans:property name="alwaysUseDefaultTargetUrl" value="true"/>
+	        <beans:property name="defaultTargetUrl" value="/admin"/>
+	       </beans:bean>
+	   </beans:property>
+	</beans:bean>
+	
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="casAuthenticationProvider" />
+	</security:authentication-manager>
+
+	<beans:bean id="casAuthenticationProvider" class="org.springframework.security.cas.authentication.CasAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userService" />
+		<beans:property name="serviceProperties" ref="serviceProperties" />
+		<beans:property name="ticketValidator">
+			<beans:bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<beans:constructor-arg index="0" value="https://localhost:5443/cas" />
+			</beans:bean>
+		</beans:property>
+		<beans:property name="key" value="CAS_PROVIDER_LOCALHOST_7443" />
+	</beans:bean>
+	
+</beans:beans>
