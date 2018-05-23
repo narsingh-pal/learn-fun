@@ -18,17 +18,19 @@
 	</beans:bean>
 
 	<security:http entry-point-ref="casAuthenticationEntryPoint" auto-config="true">
-		<!-- <security:intercept-url pattern="/secure/**" access="ROLE_USER" /> -->
-		<!-- <security:intercept-url pattern="/**" access="isAuthenticated()" /> -->
 		<security:intercept-url pattern="/admin" access="isAuthenticated()" />
-		<!-- <security:intercept-url pattern="/login/**" access="isAuthenticated()" /> -->
 		<security:custom-filter position="CAS_FILTER" ref="casAuthenticationFilter" />
 		<security:csrf disabled="true" />
 		<security:form-login />
-		<!-- <security:logout /> -->
+		<security:logout />
+		<security:custom-filter ref="requestSingleLogoutFilter" before="LOGOUT_FILTER"/>
+		<security:custom-filter ref="singleLogoutFilter" before="CAS_FILTER"/>
 		<!-- <security:remember-me key="_my_remember_me_key" token-validity-seconds="864000" data-source-ref="dataSource" user-service-ref="userService" /> -->
 	</security:http>
 
+	<!-- This filter handles a Single Logout Request from the CAS Server -->
+	<beans:bean id="singleLogoutFilter" class="org.jasig.cas.client.session.SingleSignOutFilter"/>
+	
 	<beans:bean id="casAuthenticationEntryPoint" class="org.springframework.security.cas.web.CasAuthenticationEntryPoint">
 		<beans:property name="loginUrl" value="https://localhost:5443/cas/login" />
 		<beans:property name="serviceProperties" ref="serviceProperties" />
@@ -64,6 +66,18 @@
 			</beans:bean>
 		</beans:property>
 		<beans:property name="key" value="CAS_PROVIDER_LOCALHOST_7443" />
+	</beans:bean>
+
+
+
+	<!-- This filter redirects to the CAS Server to signal Single Logout should 
+		be performed -->
+	<beans:bean id="requestSingleLogoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+		<beans:constructor-arg value="https://localhost:5443/cas/logout" />
+		<beans:constructor-arg>
+			<beans:bean class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler" />
+		</beans:constructor-arg>
+		<beans:property name="filterProcessesUrl" value="/logout/cas" />
 	</beans:bean>
 	
 </beans:beans>

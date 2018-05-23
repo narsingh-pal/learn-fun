@@ -16,7 +16,7 @@
 			<h2>
 				Welcome : ${pageContext.request.userPrincipal.name} | 
 				<%-- <a  href="/<c:url value="/logout" />"> Logout</a> --%>
-				<a  href="${pageContext.request.contextPath}/logout" /> Logout</a>
+				<a  href="${pageContext.request.contextPath}/logout/cas"> Logout</a>
 			</h2>
 		</c:if>
 	</div>

@@ -61,7 +61,7 @@ public class HelloController {
     public ModelAndView visitAdmin() {
         ModelAndView model = new ModelAndView("admin");
         model.addObject("title", "Admministrator Control Panel");
-        model.addObject("message", "This page demonstrates how to use Spring security.");
+        model.addObject("message", "This page demonstrates how to use Spring security for single sogn on using CAS.");
          
         return model;
     }
