@@ -33,3 +33,13 @@ DOCKER
 
 11. Docker Tomcat
     docker run --name tomcat8 -it --rm -p 8888:8080 tomcat:8.0
+
+Docker keywords 
+https://docs.docker.com/engine/reference/builder/
+
+
+https://docs.docker.com/engine/reference/run/#general-form
+
+volume 
+https://docs.docker.com/storage/volumes/
+
