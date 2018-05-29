@@ -1,0 +1,34 @@
+Various liferay template projects
+activator template
+api template
+CONTROL MENU entry template
+form field template
+fragment template
+freemarker portlet template
+layout template
+mvc portlet template
+npm angular portlet template
+npm billboard.js project template
+npm isomorphic portlet template
+npm jquery portlet template
+npm metaljs portlet template
+npm portlet template
+npm react portlet template
+npm vue.js portlet template
+Panel app template
+portlet configuration icon
+portlet template
+portlet provider template
+portlet toolbar contributor template
+REST template
+Service template
+Service Builder Template
+Service wrapper template
+Simulation Panel Entry template
+SOY portlet template
+SPRING MVC portlet tempate
+Template Context Contributor Template
+Theme Template
+Theme contributor template
+WAR hook template
+WAR MVC portlet template

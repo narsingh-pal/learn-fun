@@ -1,0 +1,5 @@
+Bundle-Name: greeting-core-whatsup-service
+Bundle-SymbolicName: com.nsp.j2ee.liferay.greeting.impl.whatsup
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.nsp.j2ee.liferay.greeting.impl

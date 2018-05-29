@@ -1,0 +1,13 @@
+https://dev.liferay.com/es/develop/reference/-/knowledge_base/7-0/project-templates
+
+If you’re using Blade CLI, execute the following command to display a full list of project templates:
+
+blade create -l
+
+e.g.
+blade create -t mvc-portlet -p com.nsp.j2ee.liferay.guestbook -c GuestbookPortlet my-guestbook-project
+
+blade create -t service-builder -p com.nsp.j2ee.liferay.tasks tasks
+
+
+blade create -t service-builder -p com.nsp.j2ee.liferay.leave leave-core

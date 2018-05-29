@@ -1,0 +1,7 @@
+dependencies {
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.1.0"
+	compileOnly project(":modules:greeting-core:api:greeting-core-api")
+	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+	compile group: 'org.apache.felix', name: 'org.apache.felix.gogo.command', version: '0.10.0'
+
+}

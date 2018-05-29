@@ -1,0 +1,15 @@
+Resource-serving: Serves a resource independent from the rest of the lifecycle. This lets a portlet serve dynamic content without running the Render phase on all portlets on a page. The Resource-serving phase handles AJAX requests.
+
+
+Compared to servlets, portlets also have some other key differences. Since portlets only render a portion of a page, tags like <html>, <head>, and <body> aren’t allowed. And because you don’t know the portlet’s page ahead of time, you can’t create portlet URLs directly. Instead, the portlet API gives you methods to create portlet URLs programmatically. Also, because portlets don’t have direct access to the javax.servlet.ServletRequest, they can’t read query parameters directly from a URL. Portlets instead access a javax.portlet.PortletRequest object. The portlet specification only provides a mechanism for a portlet to read its own URL parameters or those declared as public render parameters. Liferay Portal does, however, provide utility methods that can access the ServletRequest and query parameters. Portlets also have a portlet filter available for each phase in the portlet lifecycle. Portlet filters are similar to servlet filters in that they allow request and response modification on the fly.
+
+Portlets also differ from servlets by having distinct modes and window states. Modes distinguish the portlet’s current function:
+
+
+Why should we use Liferay MVC
+	1. It’s lightweight, as opposed to many other Java MVC frameworks.
+	2. There are no special configuration files that need to be kept in sync with your code.
+	3. It’s a simple extension of GenericPortlet.
+	4. You avoid writing a bunch of boilerplate code, since Liferay’s MVC framework simply looks for some pre-defined parameters when the init() method is called.
+	5. The controller can be broken down into MVC command classes, each of which handles the controller code for a particular portlet phase (render, action, and resource serving phases).
+	6. Liferay’s portlets use it. That means there are plenty of robust implementations to reference when you need to design or troubleshoot your Liferay applications.

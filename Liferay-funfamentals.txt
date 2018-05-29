@@ -1,0 +1,18 @@
+Liferay Fundamentals
+https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-0/fundamentals
+
+
+Liferay OSGI AND MODULARITY
+https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-0/osgi-and-modularity
+https://web.liferay.com/web/user.26526/blog/-/blogs/liferay-osgi-annotations-what-they-are-and-when-to-use-them
+https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-0/modularizing-an-existing-portlet
+
+Apache Felix Service Component Runtime (SCR)
+http://felix.apache.org/documentation/subprojects/apache-felix-service-component-runtime.html
+
+
+
+OSGi Declarative Services
+https://dzone.com/articles/osgi-declarative-services-and-the-registry
+https://dzone.com/articles/structure-of-an-osgi-application-with-declarative
+http://blog.vogella.com/2016/06/21/getting-started-with-osgi-declarative-services/

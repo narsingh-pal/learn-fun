@@ -1,0 +1,6 @@
+Portlets handle requests in multiple phases. This makes portlets much more flexible than servlets. Each portlet phase executes different operations:
+
+https://dev.liferay.com/es/develop/tutorials/-/knowledge_base/7-0/portlets
+https://jcp.org/en/jsr/detail?id=168
+https://jcp.org/en/jsr/detail?id=286
+https://jcp.org/en/jsr/detail?id=362

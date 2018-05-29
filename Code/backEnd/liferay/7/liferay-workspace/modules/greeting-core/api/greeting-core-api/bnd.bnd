@@ -1,0 +1,4 @@
+Bundle-Name: greeting-core-api
+Bundle-SymbolicName: com.nsp.j2ee.liferay.greeting.api
+Bundle-Version: 1.0.0
+Export-Package:com.nsp.j2ee.liferay.greeting.api

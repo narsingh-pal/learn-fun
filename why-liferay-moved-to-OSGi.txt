@@ -1,0 +1,1 @@
+Why liferay moved to OSGi

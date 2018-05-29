@@ -1,0 +1,3 @@
+Bundle-Name: greeting-client-target-hello
+Bundle-SymbolicName: com.nsp.j2ee.liferay.greeting.client.target.hello
+Bundle-Version: 1.0.0

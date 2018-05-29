@@ -1,0 +1,5 @@
+Bundle-Name: greeting-core-hi-service
+Bundle-SymbolicName: com.nsp.j2ee.liferay.greeting.impl.hi
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.nsp.j2ee.liferay.greeting.impl
