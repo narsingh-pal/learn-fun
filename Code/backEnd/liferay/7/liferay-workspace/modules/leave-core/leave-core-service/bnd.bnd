@@ -1,0 +1,5 @@
+Bundle-Name: leave-core-service
+Bundle-SymbolicName: com.nsp.j2ee.liferay.leave.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true

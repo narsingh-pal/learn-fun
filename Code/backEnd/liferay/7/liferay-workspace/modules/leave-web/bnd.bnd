@@ -1,0 +1,4 @@
+Bundle-Name: leave-web
+Bundle-SymbolicName: com.nsp.j2ee.liferay.leave
+Bundle-Version: 1.0.0
+Export-Package: com.nsp.j2ee.liferay.leave.constants

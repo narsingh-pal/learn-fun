@@ -1,0 +1,9 @@
+Bundle-Name: leave-core-api
+Bundle-SymbolicName: com.nsp.j2ee.liferay.leave.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.nsp.j2ee.liferay.leave.exception,\
+	com.nsp.j2ee.liferay.leave.model,\
+	com.nsp.j2ee.liferay.leave.service,\
+	com.nsp.j2ee.liferay.leave.service.persistence
+-includeresource: META-INF/service.xml=../leave-core-service/service.xml

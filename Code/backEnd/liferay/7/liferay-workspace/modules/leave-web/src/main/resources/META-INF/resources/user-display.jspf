@@ -1,0 +1,7 @@
+<liferay-ui:user-display
+        markupView="lexicon"
+        showUserDetails="false"
+        showUserName="true"
+        userId="<%= themeDisplay.getRealUserId() %>"
+        userName="<%= themeDisplay.getRealUser().getFullName() %>"
+/>
