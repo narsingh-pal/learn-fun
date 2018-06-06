@@ -11,3 +11,4 @@ blade create -t service-builder -p com.nsp.j2ee.liferay.tasks tasks
 
 
 blade create -t service-builder -p com.nsp.j2ee.liferay.leave leave-core
+blade create -t mvc-portlet -p com.nsp.j2ee.liferay.leave -c LeavePortlet leave-web

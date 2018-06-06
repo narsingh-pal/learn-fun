@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>ipc-event-sender-portlet</portlet-name>
+		<display-name>IPC EVENT sender portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring-context/portlet/ipc-event-sender-portlet.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>ipc-event-sender-portlet</title>
+			<short-title>ipc-event-sender-portlet</short-title>
+			<keywords>ipc-event-sender-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-publishing-event>
+			<qname>empinfo</qname>
+		</supported-publishing-event>
+	</portlet>
+
+
+	<portlet>
+		<portlet-name>ipc-event-reciever-portlet</portlet-name>
+		<display-name>IPC EVENT reciever portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring-context/portlet/ipc-event-reciever-portlet.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>ipc-event-reciever-portlet</title>
+			<short-title>ipc-event-reciever-portlet</short-title>
+			<keywords>ipc-event-reciever-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-processing-event>
+			<qname>empinfo</qname>
+		</supported-processing-event>
+	</portlet>
+
+    <event-definition>
+		<qname>empinfo</qname>
+		<value-type>com.nsp.j2ee.liferay.demo.springmvc.portlet.models.Employee</value-type>
+	</event-definition>
+</portlet-app>

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>ipc-prp-sender-portlet</portlet-name>
+		<display-name>IPC PRP sender portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring-context/portlet/ipc-prp-sender-portlet.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>ipc-prp-sender-portlet</title>
+			<short-title>ipc-prp-sender-portlet</short-title>
+			<keywords>ipc-prp-sender-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-public-render-parameter>name</supported-public-render-parameter>
+        <supported-public-render-parameter>email</supported-public-render-parameter>
+	</portlet>
+
+
+	<portlet>
+		<portlet-name>ipc-prp-reciever-portlet</portlet-name>
+		<display-name>ipc-prp-reciever-portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring-context/portlet/ipc-prp-reciever-portlet.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>ipc-prp-reciever-portlet</title>
+			<short-title>ipc-prp-reciever-portlet</short-title>
+			<keywords>ipc-prp-reciever-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+        <supported-public-render-parameter>name</supported-public-render-parameter>
+        <supported-public-render-parameter>email</supported-public-render-parameter>
+	</portlet>
+
+    <public-render-parameter>
+        <identifier>name</identifier>
+        <qname>name</qname>
+    </public-render-parameter>
+
+    <public-render-parameter>
+        <identifier>email</identifier>
+        <qname>email</qname>
+    </public-render-parameter>
+</portlet-app>
