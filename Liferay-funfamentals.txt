@@ -1,3 +1,15 @@
+Java vs OSGi Class Loading
+	https://medium.com/@technospace/java-vs-osgi-class-loading-17a1ad4cc2a5
+
+		For example, every class you write extends from java.lang.Object. Your class is loaded by the application classloader, but java.lang.Object is loaded by the boot classloader. This works because of delegation: one classloader can ask another classloader to load a class on its behalf.
+
+		In OSGi it's exactly the same thing. Each bundle has a classloader, and when you import a package from another bundle, that other bundle's classloader is used to load them.
+
+Getting Started with OSGi
+https://www.osgi.org/learning-resources-tutorials/tutorial-archive/
+
+
+
 Liferay Fundamentals
 https://dev.liferay.com/en/develop/tutorials/-/knowledge_base/7-0/fundamentals
 
