@@ -41,6 +41,12 @@ DOCKER
 
 11. Docker Tomcat
     docker run --name tomcat8 -it --rm -p 8888:8080 tomcat:8.0
+    
+12. docker build -t friendlyhello .
+This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
+
+13. docker run -p 4000:80 friendlyhello
+Run the app, mapping your machine’s port 4000 to the container’s published port 80 using -p
 
 Docker keywords 
 https://docs.docker.com/engine/reference/builder/
@@ -50,4 +56,13 @@ https://docs.docker.com/engine/reference/run/#general-form
 
 volume 
 https://docs.docker.com/storage/volumes/
+
+
+On Windows, explicitly stop the container
+
+On Windows systems, CTRL+C does not stop the container. 
+So, first type CTRL+C to get the prompt back (or open another shell), 
+then type docker container ls to list the running containers, followed by docker container stop <Container NAME or ID> to stop the container. 
+Otherwise, you get an error response from the daemon when you try to re-run the container in the next step.
+
 
