@@ -5,6 +5,46 @@ and be specific about what files you want to “copy in” to that environment.
 However, after doing that, you can expect that the build of your app defined in this Dockerfile behaves exactly the same 
 wherever it runs.
 
+..............................................................................................................
+https://stackoverflow.com/questions/29480099/docker-compose-vs-dockerfile-which-is-better
+..............................................................................................................
+
+A Dockerfile is a simple text file that contains the commands a user could call to assemble an image.
+    Example, Dockerfile
+            ===================================================================================================    
+            FROM ubuntu:latest
+            MAINTAINER john doe 
+            RUN apt-get update
+            RUN apt-get install -y python python-pip wget
+            RUN pip install Flask
+            ADD hello.py /home/hello.py
+            WORKDIR /home
+            =================================================================================================
+
+
+Docker Compose
+o - is a tool for defining and running multi-container Docker applications.
+o - define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.
+o - get an app running in one command by just running  docker-compose up
+Example, docker-compose.yml
+            =================================================================================================
+            version: '3'
+            services:
+              web:
+                build: .
+                ports:
+                - "5000:5000"
+                volumes:
+                - .:/code
+                - logvolume01:/var/log
+                links:
+                - redis
+              redis:
+                image: redis
+            volumes:
+              logvolume01: {}
+            =================================================================================================
+
 
 DOCKER
 
