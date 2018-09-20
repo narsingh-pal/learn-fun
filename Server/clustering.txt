@@ -1,0 +1,136 @@
+What I missed - https://examples.javacodegeeks.com/enterprise-java/tomcat/tomcat-clustering-session-replication-tutorial/
+
+https://community.liferay.com/news/new-clustering-code-for-liferay-portal-community/
+https://www.dontesta.it/en/2017/11/02/liferay-7-the-cluster-is-back-and-how-to-get-it/
+https://web.liferay.com/community/forums/-/message_boards/message/97704861
+
+jdbc.default.driverClassName=org.postgresql.Driver
+jdbc.default.password=postgres
+jdbc.default.url=jdbc:postgresql://localhost:5432/CLUSTER
+jdbc.default.username=postgres
+
+#Second Node
+module.framework.properties.osgi.console=localhost:11312
+
+cluster.link.enabled=true
+web.server.display.node=true
+
+
+
+Use DB Store
+dl.store.impl=com.liferay.portal.store.db.DBStore
+
+ADvanced File System Store
+dl.store.impl=com.liferay.portal.store.file.system.AdvancedFileSystemStore
+
+
+Entry in - com.liferay.portal.store.file.system.configuration.AdvancedFileSystemStoreConfiguration.cfg
+rootDir=//WS-7214/document_library - Shared folder for everyone with read/write permission
+
+
+http://technonstop.com/tutorial-setup-nfs-server-windows
+https://www.microsoft.com/en-us/download/details.aspx?id=2391
+
+http://www.sysprobs.com/configure-set-nfs-share-windows-7-ready-storage-vmware-esx
+https://www.hanewin.net/nfs-e.htm
+
+
+D:\Liferay\LR7\document_library -name:document_library
+
+
+
+
+
+--------------
+SETUP ELASTIC 
+-----
+https://dev.liferay.com/es/discover/deployment/-/knowledge_base/7-0/installing-elasticsearch
+https://dev.liferay.com/es/discover/deployment/-/knowledge_base/7-0/installing-a-search-engine
+https://web.liferay.com/community/forums/-/message_boards/message/94725519
+
+CHECK ELASTIC VERSION FROM LOCALHOST 9200 EMBEDDED VERSION
+change yml - port/name
+
+Elasticsearch has two ports available:
+http port: 9200 (rest json api) -> http.port: 9200
+transport port: 9300 (binary api) -> transport.tcp.port: 9300
+
+Embedded elasticsearch don't allow connections to transport port 9300.
+
+http://localhost:9200/_search?pretty=true
+http://localhost:9200/_cluster/state?pretty
+http://localhost:9200/_cluster/health?pretty
+
+---------------------------
+WEB SERVER APACHE
+--------------------------
+https://www.ntu.edu.sg/home/ehchua/programming/howto/Apache_HowToInstall.html
+https://www.ntu.edu.sg/home/ehchua/programming/howto/ApachePlusTomcat_HowTo.html
+
+***mod_jk for so file otherwise you need to go for isapi redirector	-----https://stackoverflow.com/questions/41011820/how-to-install-mod-jk-apache-tomcat-connectors-on-windows-server
+
+
+------Setup multiple tomcat single Apache server----LOADBALANCER
+https://girishgaurav.wordpress.com/2010/07/09/configuring-multiple-tomcat-application-servers-with-apache-http-server/
+-----Load Balancer Basics
+https://tomcat.apache.org/connectors-doc/common_howto/loadbalancers.html
+
+
+*** SESSION REPLICATION
+https://tomcat.apache.org/tomcat-8.0-doc/cluster-howto.html
+server.xml
+https://www.xtivia.com/liferay-session-replication-tomcat/
+https://web.liferay.com/community/forums/-/message_boards/message/35359683
+	<!-- You should set jvmRoute to support load-balancing via AJP ie :-->
+	<!--For stick session use jvmRoute in server.xml -->
+	
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1">
+	<!--For clustering, please take a look at documentation at:
+          /docs/cluster-howto.html  (simple how to)
+          /docs/config/cluster.html (reference documentation) -->
+		  
+		  ***PooledParallelSender - <!-- This change will tell the cluster to wait for 30 seconds before timing out message requests to the cluster; the default value for this attribute is 3000, or 3 seconds.-->
+		  ***channelSendOptions="8" <!--which enables asynchronous communication.-->
+	<Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"
+                 channelSendOptions="8">
+
+          <Manager className="org.apache.catalina.ha.session.DeltaManager"
+                   expireSessionsOnShutdown="false"
+                   notifyListenersOnReplication="true"/>
+
+          <Channel className="org.apache.catalina.tribes.group.GroupChannel">
+            <Membership className="org.apache.catalina.tribes.membership.McastService"
+                        address="228.0.0.4"
+                        port="45564"
+                        frequency="500"
+                        dropTime="3000"/>
+            <Receiver className="org.apache.catalina.tribes.transport.nio.NioReceiver"
+                      address="auto"
+                      port="4000"
+                      autoBind="100"
+                      selectorTimeout="5000"
+                      maxThreads="6"/>
+
+            <Sender className="org.apache.catalina.tribes.transport.ReplicationTransmitter">				
+              <Transport className="org.apache.catalina.tribes.transport.nio.PooledParallelSender" timeout="30000" />
+            </Sender>
+            <Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector"/>
+            <Interceptor className="org.apache.catalina.tribes.group.interceptors.MessageDispatch15Interceptor"/>
+          </Channel>
+
+          <Valve className="org.apache.catalina.ha.tcp.ReplicationValve"
+                 filter=""/>
+          <Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"/>
+
+          <ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener"/>
+        </Cluster>
+	
+
+***web.xml -  
+<distributable/>
+	
+***context.xml - if adding distributablle does not work inside web.xml then add it to tomcat's context.xml
+<Context distributable="true">
+
+
+
