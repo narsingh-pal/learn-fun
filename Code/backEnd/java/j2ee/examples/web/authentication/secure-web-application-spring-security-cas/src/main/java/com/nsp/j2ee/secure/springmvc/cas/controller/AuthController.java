@@ -25,7 +25,7 @@ public class AuthController {
       return "auth/logout";
     }
 
-
+// http://javainsimpleway.com/spring-mvc-redirecting-model-attributes-from-one-controller-to-other-controller/
 	@RequestMapping("/login")
     public String login() {
         /*return "redirect:/secured";*/
