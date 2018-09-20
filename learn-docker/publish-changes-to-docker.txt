@@ -1,0 +1,5 @@
+docker tag friendlyhello narsinghpal/get-started:part1
+
+docker push narsinghpal/get-started:part1
+
+docker run -p 4000:80 narsinghpal/get-started:part1

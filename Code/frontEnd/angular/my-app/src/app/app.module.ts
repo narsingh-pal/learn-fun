@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { InputWithValidationMsgComponent } from './input-with-validation-msg/input-with-validation-msg.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputWithValidationMsgComponent
   ],
   imports: [
     BrowserModule
