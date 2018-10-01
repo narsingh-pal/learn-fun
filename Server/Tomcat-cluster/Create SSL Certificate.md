@@ -1,3 +1,6 @@
+### How to create a self-signed SSL Certificate
+https://www.akadia.com/services/ssh_test_certificate.html
+
 ### Generating an SSL Certificate with Apache+mod_ssl
 http://slacksite.com/apache/certificate.php
 
