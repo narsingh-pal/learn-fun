@@ -1,0 +1,10 @@
+Run openssl from command prompt and execute below commands
+
+A. Generate Key
+	genrsa -des3 -out local.nsp.com.key 1024
+B. Generate CSR request
+	req -new -key local.nsp.com.key -out local.nsp.com.csr
+C. Create a copy of local.nsp.com.key as local.nsp.com.key.org and remove the password from key for local unsigned CSR
+	rsa -in local.nsp.com.key.org -out local.nsp.com.key
+D. Create unsigned certificate
+	x509 -req -days 365 -in local.nsp.com.csr -signkey local.nsp.com.key -out local.nsp.com.crt
