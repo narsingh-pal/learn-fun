@@ -19,7 +19,7 @@
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
  -->
-<Server port="8006" shutdown="SHUTDOWN">
+<Server port="8005" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -66,7 +66,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector port="8081" protocol="HTTP/1.1"
+    <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
     <!-- A "Connector" using the shared thread pool-->
@@ -88,7 +88,7 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="8010" protocol="AJP/1.3" redirectPort="8443" />
+    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
 
 
     <!-- An Engine represents the entry point (within Catalina) that processes
@@ -97,10 +97,10 @@
          on to the appropriate Host (virtual host).
          Documentation at /docs/config/engine.html -->
 
-    <!-- You should set jvmRoute to support load-balancing via AJP ie :-->
-    <Engine name="Catalina" defaultHost="localhost" jvmRoute="tomcat1">
-    
-    <!--<Engine name="Catalina" defaultHost="localhost">-->
+    <!-- You should set jvmRoute to support load-balancing via AJP ie :
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1">
+    -->
+    <Engine name="Catalina" defaultHost="localhost">
 
       <!--For clustering, please take a look at documentation at:
           /docs/cluster-howto.html  (simple how to)
@@ -108,35 +108,6 @@
       <!--
       <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"/>
       -->
-	  
-	  <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster" channelSendOptions="8">	
-	
-		<Manager className="org.apache.catalina.ha.session.DeltaManager"
-		expireSessionsOnShutdown="false"		
-		notifyListenersOnReplication="true"/>
-	
-		<Channel className="org.apache.catalina.tribes.group.GroupChannel">
-		
-			<Membership className="org.apache.catalina.tribes.membership.McastService"
-			address="228.0.0.4"
-			port="45564" frequency="500"
-			dropTime="3000"/>			
-			<Sender className="org.apache.catalina.tribes.transport.ReplicationTransmitter">				
-				<Transport className="org.apache.catalina.tribes.transport.nio.PooledParallelSender"/>				
-			</Sender>			
-			<Receiver className="org.apache.catalina.tribes.transport.nio.NioReceiver" 
-			address="auto" port="4000" autoBind="100"
-			selectorTimeout="5000" maxThreads="6"/>						
-			<Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector"/>			
-			<Interceptor className="org.apache.catalina.tribes.group.interceptors.MessageDispatch15Interceptor"/>	
-			<Interceptor className="org.apache.catalina.tribes.group.interceptors.ThroughputInterceptor"/>						
-		</Channel>
-		
-		<Valve className="org.apache.catalina.ha.tcp.ReplicationValve" />
-        <Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"/>		
-		<ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener" />		
-		
-	</Cluster>
 
       <!-- Use the LockOutRealm to prevent attempts to guess user passwords
            via a brute-force attack -->

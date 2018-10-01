@@ -1,0 +1,10 @@
+bin/
+cgi-bin/
+error/
+htdocs/
+icons/
+include/
+lib/
+logs/
+modules/
+*.txt
