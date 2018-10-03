@@ -1,0 +1,6 @@
+*
+!tomcat-8.0.32/
+!osgi
+!portal-ext.properties
+!portal-setup-wizard.properties
+!.gitignore
