@@ -1,0 +1,5 @@
+*
+!webapps/
+!bin/
+!conf/
+!.gitignore
