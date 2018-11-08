@@ -7,4 +7,3 @@ chrome://inspect/#devices
 
 
 gulp watch --port 11312
-gulp watch --gogoShellConfig.port 11312
