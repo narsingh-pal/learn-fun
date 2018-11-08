@@ -4,3 +4,7 @@ https://stackoverflow.com/questions/40033298/how-to-debug-a-gulp-task
 
 node --inspect-brk gulpfile.js
 chrome://inspect/#devices
+
+
+gulp watch --port 11312
+gulp watch --gogoShellConfig.port 11312
