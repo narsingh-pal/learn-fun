@@ -14,10 +14,18 @@
 	},
 	"devDependencies": {
 		"gulp": "^3.8.10",
-		"liferay-theme-tasks": "^1.4.2",
+		"liferay-theme-tasks": "^8.0.0-beta.5",
 		"liferay-theme-deps-7.0": "~1.0.0"
 	},
 	"publishConfig": {
 		"tag": "7_0_x"
+	},
+	"dependencies": {
+		"bootstrap-select": "^1.13.3",
+		"fs": "0.0.1-security",
+		"gulp-install": "^1.1.0",
+		"gulp-typescript": "^5.0.0-alpha.3",
+		"liferay-gulp-tasks": "^0.5.5",
+		"moment": "^2.22.2"
 	}
 }

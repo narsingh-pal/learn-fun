@@ -1,0 +1,10 @@
+{
+  "LiferayTheme": {
+    "appServerPath": "C:/learn-fun/Server/liferay-ce-portal-7.0-ga6/tomcat-8.0.32",
+    "deployPath": "C:\\learn-fun\\Server\\liferay-ce-portal-7.0-ga6\\deploy",
+    "url": "http://localhost:6080",
+    "appServerPathPlugin": "C:\\Users\\napa0817\\IdeaProjects\\liferay-workspace\\themes\\my-dashboard-theme\\.web_bundle_build",
+    "deployed": true,
+    "pluginName": "my-dashboard-theme"
+  }
+}

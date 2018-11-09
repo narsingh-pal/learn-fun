@@ -6,6 +6,11 @@ AUI().ready(
 	*/
 
 	function() {
+        require(['moment'], function(moment) {
+            console.log("Hey it works now !!!  " + moment().format());
+        }, function(error) {
+            console.error(error);
+        });
 	}
 );
 
