@@ -1,0 +1,18 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import "hero_header.css";
+@import "custom_dockbar.css";
+@import "partially_collapse_sidebar.css";
+@import "navbar_public.css";
+@import "footer-distributed-with-address-and-phones.css";
+@import "megamenu.css";
+@import "card.css";
+@import "bootstrap-hero-carousal.css";
+@import "aui-animations.css";	
+/* @import "animations-ie-fix.css"; */

@@ -1,0 +1,44 @@
+.aui{
+	.navbar-brand-centered1 {
+	 	transform: translateX(-50%);
+	  left: 50%;
+	  position: absolute;
+	} 
+	.navbar-toggle {
+	    z-index:3;
+	}
+}
+
+#brandImage {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top:0px;
+}
+
+#home {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top:0px;
+}
+
+#profilePicture1{
+	border-radius: 50%;
+	float: left;
+	max-width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#greetingPublic{
+	 padding-top: 12px;
+	 padding-left: 5px;
+}
+
+#homePublic{
+	padding-top: 10px;
+    padding-bottom: 5px;
+    top: 0px;
+    font-size: 25px;
+    margin-top: 5px;
+}
+

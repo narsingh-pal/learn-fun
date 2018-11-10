@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.5+</version>
+	</compatibility>
+	<theme id="dashboard-new" name="dashboard-new-theme">
+		<template-extension>ftl</template-extension>
+		<settings>
+            <setting key="portlet-setup-show-borders-default" value="false"/>
+            <setting configurable="true" key="header-article-id" value="HEADER" />			
+			<setting configurable="true" key="footer-article-id" value="FOOTER" />
+			<setting configurable="true" key="login-page-title" value="Login" />
+			<setting configurable="true" key="home-carousal" value="homecarousal" />
+			<setting configurable="true" key="home-page-title" value="Home" />
+			<setting configurable="true" key="site-name" value="POC" />
+			<setting configurable="true" type="select" key="full-navigation-enabled" options="true,false" value="false" ></setting>
+			<setting configurable="true" type="select" key="show-breadcrumbs" options="true,false" value="true" ></setting>
+        </settings>
+	</theme>
+</look-and-feel>
