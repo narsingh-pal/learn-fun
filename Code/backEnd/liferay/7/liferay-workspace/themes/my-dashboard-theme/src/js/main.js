@@ -6,12 +6,50 @@ AUI().ready(
 	*/
 
 	function() {
+	    // code for moment.js
         require(['moment'], function(moment) {
             console.log("Hey it works now !!!  " + moment().format());
         }, function(error) {
             console.error(error);
         });
+
+        //Loading jQuery asynchronously
+        require(['jquery'], function($) {
+            $(window).scroll(function(e){
+                parallax();
+            });
+
+            function parallax(){
+                var scrolled = $(window).scrollTop();
+                $('.bg').css('bottom',-(scrolled*0.1)+'px');
+            }
+        });
+
+        //Loading tooltipster asynchronously
+        require(['jquery','tooltipster'], function($, tooltipster ) {
+            console.dir( $ ) // OK
+            console.dir( tooltipster ) // OK
+            $('#demo-image').tooltipster();
+            $('#demo-span').tooltipster();
+            $('#demo-span-click').tooltipster({trigger: 'click'});
+            $('.tooltip').tooltipster({
+                contentCloning: true
+            });
+            $('#demo-html').tooltipster({
+                trigger: 'custom',
+                triggerOpen: {
+                    mouseenter: true
+                },
+                triggerClose: {
+                    mouseleave: true
+                },
+                contentCloning: true
+            });
+        });
+
 	}
+
+
 );
 
 Liferay.Portlet.ready(
@@ -38,3 +76,4 @@ Liferay.on(
 	function() {
 	}
 );
+

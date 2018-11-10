@@ -21,7 +21,7 @@
 <@liferay.control_menu />
 <div class="" id="topHeader">
     <header id="banner" role="banner">
-        <div id="heading">
+        <#--<div id="heading">
             <h1 class="site-title">
                 <a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
                     <img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
@@ -32,40 +32,21 @@
                     </span>
 				</#if>
             </h1>
-        </div>
+        </div>-->
 
-		<#if !is_signed_in>
+		<#--<#if !is_signed_in>
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
-		</#if>
+		</#if>-->
 
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
     </header>
 </div>
-<div class="jumbotron container-fluid">
-    <div style="clear:both;">
-        Curabitur a felis in nunc fringilla tristique. Vivamus euismod mauris. Aenean massa. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis.
-
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Proin magna. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
-
-        Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Aliquam lobortis. Ut tincidunt tincidunt erat. Nulla porta dolor.
-
-        Quisque id mi. Nunc nonummy metus. Nullam quis ante. Vivamus aliquet elit ac nisl.
-    </div>
-    <br/>
-    <div style="clear:both;">
-        Curabitur a felis in nunc fringilla tristique. Vivamus euismod mauris. Aenean massa. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis.
-
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Proin magna. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
-
-        Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Aliquam lobortis. Ut tincidunt tincidunt erat. Nulla porta dolor.
-
-        Quisque id mi. Nunc nonummy metus. Nullam quis ante. Vivamus aliquet elit ac nisl.
-    </div>
+<#--<#include "${full_templates_path}/lib/jumbotron.ftl" />-->
+<#--<#include "${full_templates_path}/lib/parallax.ftl" />-->
+<#include "${full_templates_path}/lib/tooltipster.ftl" />
 <div class="container-fluid" id="wrapper">
-
-
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
 
@@ -85,8 +66,6 @@
 			</@>
 		</#if>
 	</section>
-
-
 </div>
 
 <div class="container-fluid" id="bottomFooter">

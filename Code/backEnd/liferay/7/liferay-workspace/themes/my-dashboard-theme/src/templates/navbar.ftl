@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -88,8 +88,17 @@
                 <button type="submit" class="btn btn-default">Submit</button>
                 <#--<@liferay.search/>-->
             </form>
+
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
+                <li>
+
+                    <#if !is_signed_in>
+                        <a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
+                    <#else>
+                    <a href="/c/portal/logout">Logout</a>
+                    </#if>
+
+                </li>
             </ul>
         </div>
     </div>
