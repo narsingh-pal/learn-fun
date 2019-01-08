@@ -1,0 +1,5 @@
+Bundle-Name: leave-panel-app-project
+Bundle-SymbolicName: com.nsp.j2ee.liferay.leave.panel.app
+Bundle-Version: 1.0.0
+Export-Package: com.nsp.j2ee.liferay.leave.constants
+Web-ContextPath: /leave-panel-app
