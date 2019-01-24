@@ -15,7 +15,10 @@ public class GreetingClientConfigurable {
         this.greet = greet;
     }
 
-    @Reference(target="(greeting.configurator=true)")
+    // Overriding reluctant references
+	@Reference(target="(greeting.configurator=true)",
+            policyOption = ReferencePolicyOption.GREEDY
+    )
     GreetingConfigurator greetingConfigurator;
 
     @Activate
