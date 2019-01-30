@@ -14,3 +14,4 @@ blade create -t service-builder -p com.nsp.j2ee.liferay.leave leave-core
 blade create -t mvc-portlet -p com.nsp.j2ee.liferay.leave -c LeavePortlet leave-web
 
 blade create -t panel-app -v 7.0 -p com.nsp.j2ee.liferay.leave.panel -c Leave leave-panel-app-project
+blade create -t rest -v 7.0 -p com.nsp.j2ee.liferay.leave.rest.extender -c LeaveRestController leave-rest

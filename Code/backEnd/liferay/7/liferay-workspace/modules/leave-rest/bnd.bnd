@@ -1,0 +1,4 @@
+Bundle-Name: leave-rest
+Bundle-SymbolicName: com.nsp.j2ee.liferay.leave.rest.extender
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration
