@@ -7,8 +7,8 @@ http://slacksite.com/apache/certificate.php
 ### 21 OpenSSL Examples to Help You in Real-World
 https://geekflare.com/openssl-commands-certificates/
 
-### 21 Steps to create a .jks keystore using .key and .crt files
-https://blogs.oracle.com/blogbypuneeth/steps-to-create-a-jks-keystore-using-key-and-crt-files
+### Steps to create a .jks keystore using .key and .crt files
+https://medium.com/java-user-group-malta/importing-existing-certificates-into-a-keystore-using-openssl-905d9e0b7175
 
 
 # Create, Manage & Convert SSL Certificates with OpenSSL
