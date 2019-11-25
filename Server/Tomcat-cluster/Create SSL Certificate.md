@@ -7,6 +7,10 @@ http://slacksite.com/apache/certificate.php
 ### 21 OpenSSL Examples to Help You in Real-World
 https://geekflare.com/openssl-commands-certificates/
 
+### 21 Steps to create a .jks keystore using .key and .crt files
+https://blogs.oracle.com/blogbypuneeth/steps-to-create-a-jks-keystore-using-key-and-crt-files
+
+
 # Create, Manage & Convert SSL Certificates with OpenSSL
 
 One of the most popular commands in SSL to  **create**,  **convert**,  **manage**  the  [SSL Certificates](https://geekflare.com/ssl-test-certificate/)  is OpenSSL.
