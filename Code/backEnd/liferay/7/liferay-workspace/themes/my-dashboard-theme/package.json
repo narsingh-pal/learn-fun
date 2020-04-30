@@ -21,7 +21,7 @@
 		"tag": "7_0_x"
 	},
 	"dependencies": {
-		"jquery": "^2.1.3",
+		"jquery": "^3.5.0",
 		"moment": "^2.22.2",
 		"tooltipster": "^4.2.6"
 	}
