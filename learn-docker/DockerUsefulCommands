@@ -106,3 +106,11 @@ then type docker container ls to list the running containers, followed by docker
 Otherwise, you get an error response from the daemon when you try to re-run the container in the next step.
 
 
+
+
+Liferay DXP docker image steps
+ docker pull liferay/dxp:7.1.10-sp4
+ docker run -v D:/learn-docker/liferay/DXP/7_1/xyz123:/mnt/liferay -it -p 8888:8080 liferay/dxp:7.1.10-sp4 
+ docker run -v D:/learn-docker/liferay/DXP/7_1/xyz123:/mnt/liferay --name lrtest -it -p 8888:8080 liferay/dxp:7.1.10-sp4 
+ ---------To SSH into this container, run: "docker exec -it <CONTAINER_ID> /bin/bash".
+ e.g. docker exec -it e9fd76945356 /bin/bash
